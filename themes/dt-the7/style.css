@@ -1,0 +1,214 @@
+/*
+Theme Name: The7
+Theme URI: http://dream-theme.com/the7/
+Author: Dream-Theme
+Author URI: http://dream-theme.com/
+Description: Put simply, The7 is THE most customizable WordPress theme on the market. It features 630+ design customization options. People new to multipurpose WordPress themes will be delighted with The7 Design Wizard. It allows to choose basic settings like branding, colors, header layout, etc. and intelligently calculates all the rest. Voilà, your pro-grade site design is ready in mere minutes. Automatically! Add a seamless integration with Visual Composer page builder, Slider Revolution, WooCommerce, WPML (as well as other most popular plugins), and you get the definitive web-development toolkit. And, yes, it is mobile friendly (certified by Google) and SEO-ready.
+Version: 3.6.1
+License: This WordPress theme is comprised of two parts: (1) The PHP code and integrated HTML are licensed under the GPL license as is WordPress itself.  You will find a copy of the license text in the same directory as this text file. Or you can read it here: http://wordpress.org/about/gpl/ (2) All other parts of the theme including, but not limited to the CSS code, images, and design are licensed according to the license purchased. Read about licensing details here: http://themeforest.net/licenses/regular_extended
+License URI: License.txt
+Tags: multipurpose, responsive, retina ready, SEO ready, mobile friendly, iOS, material design, clean, minimal, business, corporate, portfolio, creative, photography, one page site, micro site
+Text Domain: the7mk2
+*/
+
+
+.blog .dt-format-gallery .dt-format-gallery-coll.full,
+.archive .dt-format-gallery .dt-format-gallery-coll.full,
+.search .dt-format-gallery .dt-format-gallery-coll.full
+{
+	display: none;
+}
+
+
+.wp-caption-text,
+.sticky,
+.gallery-caption,
+.bypostauthor {}
+
+#footer.solid-bg {width: 1280px;}
+
+.home #footer.solid-bg, .page-id-3110 #footer.solid-bg {width: 100%;}
+
+#bottom-bar.solid-bg {
+	display: none;
+}
+
+.footer .widget {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 0
+}
+
+.footer .widget a {
+	text-decoration: none;
+}
+
+.footer .widget a:hover {
+	color: #6cb0e1;
+} 
+
+.solid-bg.sidebar-content .widget-title,
+.sidebar-content .widget-title {
+	color: #c22032;
+	font-size: 1.4rem;
+}
+
+.solid-bg.sidebar-content .widget,
+.sidebar-content .widget, 
+.sidebar .widget:first-child {
+	border-top: 5px solid #c22032;
+	padding-top: 15px;
+	background: transparent;
+}
+
+#page input[type="submit"] {
+	color: #fff;
+	margin-left: 1rem;
+}
+
+.stripe-style-4 .button a, button a {
+	text-decoration: none;
+	font-size: 1rem;
+}
+
+.stripe-style-4  .button a:hover, button a:hover {
+	color: #000;
+}
+
+.services-sidebar h4, .services-sidebar li, .services-sidebar p {
+	color: #fff;
+}
+
+.dt-mega-menu.mega-auto-width.mega-column-3>.sub-nav {
+	width: 230px;
+}
+
+.dt-mega-menu.mega-auto-width .sub-nav .dt-mega-parent.wf-1-3 {
+	width: 100%;
+}
+
+/* Featured Post on Homepage*/
+
+extended-featured-widget {
+	background: transparent;
+	border: none;
+}
+
+.extended-featured-widget .entry-title {
+	text-align: center;
+	font-size: 30px;
+	padding: 2rem 10rem 0;
+	line-height: 2.8rem;
+}
+
+.extended-featured-widget .entry-title a {
+	color: #fff !important;
+		
+}
+
+.extended-featured-widget .post-info {
+	text-align: center;
+	font-size: 1.3rem;
+	color: #fff !important;
+	width: 100%;
+}
+
+.extended-featured-widget .entry-author {
+	background: none;
+	padding: 0;
+}
+	
+.extended-featured-widget .entry-author-name, .extended-featured-widget .entry-time {
+	color: #fff !important;
+}
+
+.extended-featured-widget a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #fff !important;
+}
+
+.extended-featured-widget .entry-content {
+	width: 100%;
+}
+
+.extended-featured-widget .entry-content p {
+	font-size: 1.3rem;
+	color: #fff !important;
+	text-align: center;
+}
+
+.extended-featured-widget .entry-content a {
+	clear: both;
+	font-size: 45px;
+	color: #fff !important;
+	display: block;
+	padding: 1rem;
+	text-align: center;
+	width: 100%;
+} 
+
+.extended-featured-widget .entry-content a:hover {
+	color: #6cb0e1;
+}
+
+#extended-featured-widget-2 {
+	padding-bottom: 0;
+	}
+
+#sf_widget_constantcontact_2_form input {
+	margin-right: 1rem;
+}
+
+#text-35, #text-36 {
+	padding: 0;
+	border-top: none;
+}
+
+.sidebar-content .widget {
+	padding-top: 12px;
+}
+
+.page-id-3110 .content ul {
+    	color: #000;
+    	width: 249px;
+    	margin: 1rem auto;
+	list-style: none;
+}
+
+.rpb_carousel-1 {
+	margin: 2rem 0;
+}
+
+#main {
+	padding:0;
+}
+
+#branding {
+	padding: 1rem 0;
+}
+
+.page-id-3110 .widget_sf_widget_constantcontact .widget-title,
+.page-id-3110 #text-35 .widget-title {
+	font-size: 26px;
+	font: normal normal 300 26px / 40px "Open Sans", Helvetica, Arial, Verdana, sans-serif;
+	color: #fff;
+}
+
+.page-id-3110 #pi_simpletwittertweets-2 ul {
+	list-style: none;
+}
+
+.stripe-style-5 .testimonial-item {
+	background: transparent;
+}
+
+.testimonial-content p {
+	font-size: 16px;
+}
+
+@media (max-width: 1023px) {
+	.extended-featured-widget .entry-title {
+		padding: 0;
+	}
+}
