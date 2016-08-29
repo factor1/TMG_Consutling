@@ -80,5 +80,7 @@ get_header();
   </div>
 </section>
 
+<section id="resource-posts" class="container"></section>
+
 <?php
 get_footer();
