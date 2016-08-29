@@ -21,9 +21,27 @@ $primary:   $blue;
   border: 1px solid #ccc;
   width: 130px;
   max-width: 100%;
+  height: 30px;
   color: $primary;
 }
 
 .filter-select + .filter-select{
   margin-left: 15px;
+}
+
+.filter-submit{
+  display: inline-block;
+  width: auto;
+  height: 30px;
+  text-decoration: none;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.filter-clear{
+  color: #ccc;
+  text-decoration: none;
+  &--active{
+    color: $primary;
+  }
 }
