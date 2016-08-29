@@ -21,11 +21,61 @@ get_header();
       </p>
     </div>
   </div>
-  <div class="row">
+  <div class="row filter-row">
     <div class="col-12">
       <h2 class="filter-headline">
         Filter Resources
       </h2>
+      <div class="filter-select">
+        Categories
+        <div class="filter-dropdown">
+          <ul>
+            <li>
+              Item
+            </li>
+            <li>
+              Item
+            </li>
+            <li>
+              Item
+            </li>
+            <li>
+              Item
+            </li>
+            <li>
+              Item
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="filter-select">
+        Topics
+        <div class="filter-dropdown">
+          <ul>
+            <li>
+              Item
+            </li>
+            <li>
+              Item
+            </li>
+            <li>
+              Item
+            </li>
+            <li>
+              Item
+            </li>
+            <li>
+              Item
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="filter-submit">
+        Submit
+      </a>
+      <a href="#" class="filter-clear">
+        Clear Filters
+      </a>
     </div>
   </div>
 </section>

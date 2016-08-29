@@ -14,3 +14,16 @@ $primary:   $blue;
   display: inline-block;
   color: $primary;
 }
+
+// filter select menus/dropdowns
+.filter-select{
+  display: inline-block;
+  border: 1px solid #ccc;
+  width: 130px;
+  max-width: 100%;
+  color: $primary;
+}
+
+.filter-select + .filter-select{
+  margin-left: 15px;
+}
