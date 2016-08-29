@@ -1,7 +1,7 @@
 // Set the paths you will be working with
 var cssFiles     = ['./assets/css/*.css', '!./assets/css/*.min.css'],
     sassFiles    = ['./assets/scss/**/*.scss'],
-    styleFiles   = [cssFiles, sassFiles],
+    styleFiles   = [cssFiles, sassFiles];
 
 // include gulp
 var gulp = require('gulp');
@@ -63,6 +63,7 @@ gulp.task('styles', ['minify-css']);
 // Watch Files For Changes
 gulp.task('watch', function() {
   gulp.watch( sassFiles, ['styles']);
+});
 
 
 // Default Task
