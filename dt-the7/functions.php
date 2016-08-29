@@ -36,7 +36,7 @@ add_action( 'wp_enqueue_scripts', 'f1_styles' );
 /**
   * Add REST API support to an already registered post type.
   */
-  add_action( 'init', 'my_custom_post_type_rest_support', 25 );
+  add_action( 'init', 'tmg_resources_rest_support', 25 );
   function tmg_resources_rest_support() {
   	global $wp_post_types;
 
