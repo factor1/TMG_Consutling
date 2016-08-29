@@ -16,6 +16,7 @@ jQuery(document).ready(function(){
         console.log('[Loaded Posts Successfully]');
         jQuery.each(posts, function(index, value){
           console.log(value);
+          console.log(this.title.rendered);
         });
       }
     });
