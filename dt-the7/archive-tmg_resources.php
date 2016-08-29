@@ -17,7 +17,7 @@ get_header();
         for external audiences.
       </p>
       <p class="contact-row">
-        Contact us at 512.993.6331 to learn more or email <a href="mailto:research@tmgconsulting.com">researcg@tmgconsulting.com</a>.
+        Contact us at 512.993.6331 to learn more or email <a href="mailto:research@tmgconsulting.com">research@tmgconsulting.com</a>.
       </p>
     </div>
   </div>
