@@ -13,6 +13,10 @@ var sass         = require('gulp-sass'),
     sourcemaps   = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
     plumber      = require('gulp-plumber'),
+    jshint       = require('gulp-jshint'),
+    uglify       = require('gulp-uglify'),
+    concat       = require('gulp-concat'),
+    stylish      = require('jshint-stylish'),
     notify       = require('gulp-notify');
 
 /*--------------------------------------------------------
