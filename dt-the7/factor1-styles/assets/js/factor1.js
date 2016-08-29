@@ -14,6 +14,9 @@ jQuery(document).ready(function(){
       dataType: 'json',
       success: function(posts){
         console.log('[Loaded Posts Successfully]');
+        jQuery.map(posts, function(value, index){
+          console.log(id);
+        });
       }
     });
   }
