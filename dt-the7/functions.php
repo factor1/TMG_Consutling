@@ -49,3 +49,41 @@ add_action( 'wp_enqueue_scripts', 'f1_styles' );
   	}
 
   }
+
+	/**
+	  * Add REST API support to an already registered taxonomy.
+	  */
+	  add_action( 'init', 'resource_category_rest_support', 25 );
+	  function resource_category_rest_support() {
+	  	global $wp_taxonomies;
+
+	  	//be sure to set this to the name of your taxonomy!
+	  	$taxonomy_name = 'resource_category';
+
+	  	if ( isset( $wp_taxonomies[ $taxonomy_name ] ) ) {
+	  		$wp_taxonomies[ $taxonomy_name ]->show_in_rest = true;
+	  		$wp_taxonomies[ $taxonomy_name ]->rest_base = $taxonomy_name;
+	  		$wp_taxonomies[ $taxonomy_name ]->rest_controller_class = 'WP_REST_Terms_Controller';
+	  	}
+
+
+	  }
+
+		/**
+		  * Add REST API support to an already registered taxonomy.
+		  */
+		  add_action( 'init', 'resource_tag_rest_support', 25 );
+		  function resource_tag_rest_support() {
+		  	global $wp_taxonomies;
+
+		  	//be sure to set this to the name of your taxonomy!
+		  	$taxonomy_name = 'resource_tag';
+
+		  	if ( isset( $wp_taxonomies[ $taxonomy_name ] ) ) {
+		  		$wp_taxonomies[ $taxonomy_name ]->show_in_rest = true;
+		  		$wp_taxonomies[ $taxonomy_name ]->rest_base = $taxonomy_name;
+		  		$wp_taxonomies[ $taxonomy_name ]->rest_controller_class = 'WP_REST_Terms_Controller';
+		  	}
+
+
+		  }
