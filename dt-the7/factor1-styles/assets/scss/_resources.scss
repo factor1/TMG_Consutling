@@ -26,6 +26,7 @@ $primary:   $blue;
   height: 28px;
   padding: 3px 10px 0;
   color: $primary;
+  cursor: pointer;
   .filter-dropdown{
     display: none;
   }
@@ -44,11 +45,13 @@ $primary:   $blue;
   text-decoration: none;
   text-align: center;
   border: 1px solid #ccc;
+  cursor: pointer;
 }
 
 .filter-clear{
   color: #ccc;
   text-decoration: none;
+  margin-left: 15px;
   &--active{
     color: $primary;
   }
