@@ -80,7 +80,13 @@ get_header();
   </div>
 </section>
 
-<section id="resource-posts" class="container"></section>
+<section id="resource-posts" class="container">
+  <div class="row">
+    <div class="col-10 col-centered text-center">
+      <img src="<?php bloginfo('template_url');?>/factor1-styles/assets/svg/rolling.svg" alt="Loading...">
+    </div>
+  </div>
+</section>
 
 <?php
 get_footer();
