@@ -21,6 +21,13 @@ get_header();
       </p>
     </div>
   </div>
+  <div class="row">
+    <div class="col-12">
+      <h2>
+        Filter Resources
+      </h2>
+    </div>
+  </div>
 </section>
 
 <?php
