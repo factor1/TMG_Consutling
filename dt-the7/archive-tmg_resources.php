@@ -16,7 +16,7 @@ get_header();
         for utilities and solution providers, along with whitepapers and presentations
         for external audiences.
       </p>
-      <p>
+      <p class="contact-row">
         Contact us at 512.993.6331 to learn more or email <a href="mailto:research@tmgconsulting.com">researcg@tmgconsulting.com</a>.
       </p>
     </div>
