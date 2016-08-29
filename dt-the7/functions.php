@@ -28,6 +28,7 @@ require( trailingslashit( get_template_directory() ) . 'inc/init.php' );
 function f1_styles() {
 	if( is_post_type_archive('tmg_resources') || is_singular('tmg_resources') ){
 		wp_enqueue_style('factor1-styles', get_template_directory_uri() . '/factor1-styles/assets/css/factor1.min.css');
+		wp_enqueue_script('factor1-js', get_template_directory_uri() . '/factor1-styles/assets/js/factor1.min.js', array(), true);
 	}
 }
 add_action( 'wp_enqueue_scripts', 'f1_styles' );
