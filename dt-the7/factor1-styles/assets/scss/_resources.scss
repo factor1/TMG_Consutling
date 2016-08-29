@@ -1,1 +1,11 @@
 // Resource Plugin Styles
+
+// colors
+$blue:      #137abf;
+$primary:   $blue;
+
+// filter headline
+.filter-headline{
+  display: inline-block;
+  color: $primary;
+}

@@ -23,7 +23,7 @@ get_header();
   </div>
   <div class="row">
     <div class="col-12">
-      <h2>
+      <h2 class="filter-headline">
         Filter Resources
       </h2>
     </div>
