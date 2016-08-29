@@ -1,6 +1,8 @@
 // Set the paths you will be working with
 var cssFiles     = ['./assets/css/*.css', '!./assets/css/*.min.css'],
     sassFiles    = ['./assets/scss/**/*.scss'],
+    jsFiles      = ['./assets/js/factor1.js'],
+    concatFiles  = ['./assets/js/*.js', '!./assets/js/factor1.min.js', '!./assets/js/all.js'],
     styleFiles   = [cssFiles, sassFiles];
 
 // include gulp
@@ -44,6 +46,18 @@ gulp.task('sass', function() {
     .pipe(gulp.dest( './assets/css' ));
 });
 
+// Lint JavaScript
+gulp.task('lint', function() {
+  return gulp.src( jsFiles )
+    .pipe(sourcemaps.init())
+      .pipe(plumber())
+      .pipe(jshint())
+      .pipe(jshint.reporter(stylish))
+      .pipe(jshint.reporter('fail'))
+      .on('error', notify.onError({ message: 'Error compiling JavaScript!'}))
+    .pipe(sourcemaps.write());
+});
+
 /*------------------------------------------------------------------------------
   Production Tasks
 ------------------------------------------------------------------------------*/
@@ -64,6 +78,16 @@ gulp.task('minify-css', ['sass'], function() {
 // Styles Task - minify-css is the only task we call, because it is dependent upon sass running first.
 gulp.task('styles', ['minify-css']);
 
+// Concatenate & Minify JavaScript
+gulp.task('scripts', ['lint'], function() {
+  return gulp.src( concatFiles )
+    .pipe(concat( 'all.js' ))
+    .pipe(gulp.dest( './assets/js/' ))
+    .pipe(rename('factor1.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest( './assets/js/' ));
+});
+
 // Watch Files For Changes
 gulp.task('watch', function() {
   gulp.watch( sassFiles, ['styles']);
@@ -71,4 +95,4 @@ gulp.task('watch', function() {
 
 
 // Default Task
-gulp.task('default', ['styles', 'watch']);
+gulp.task('default', ['styles','scripts','watch']);
