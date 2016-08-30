@@ -61,7 +61,7 @@ jQuery(document).ready(function(){
             jQuery.each(this[i], function(index, value){
               //console.log('There are ' + index + ' items');
               //console.log(this);
-              console.log(this.name);
+              console.log(this[i].name);
             });
 
             // var termType = this[i].taxonomy,
