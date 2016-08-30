@@ -55,8 +55,6 @@ jQuery(document).ready(function(){
           }
 
           // Determine what Terms the post is associated with
-          console.log(postTerms);
-
           jQuery.each(postTerms, function(index, value){
             console.log(this[0].taxonomy);
           });
