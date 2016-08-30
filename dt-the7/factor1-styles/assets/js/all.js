@@ -58,7 +58,7 @@ jQuery(document).ready(function(){
           console.log(postTerms);
 
           jQuery.each(postTerms, function(index, value){
-            console.log(this.taxonomy);
+            console.log(this[index].taxonomy);
           });
 
           // Do the magic!
