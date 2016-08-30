@@ -30,9 +30,12 @@ jQuery(document).ready(function(){
               postThumbnail   = this.featured_media,
               postCat         = this.resource_category[0],
               postTag         = this.resource_tag,
-              postPermalink   = this.link;
+              postPermalink   = this.link,
+              resourceType    = this.acf.resource_type,
+              resourceUpload  = this.acf.resource_upload;
 
-          jQuery('#resource-posts').append('<div class="row"><div class="col-3 text-center">Featured Image</div><div class="col-9"><h2>' + postTitle + '</h2></div></div>');
+
+          jQuery('#resource-posts').append('<div class="row"><div class="col-3 text-center">Featured Image</div><div class="col-9"><h2>' + postTitle + '</h2><p class="resource-post-date">' + postDate + '</p></div></div>');
 
         });
 
