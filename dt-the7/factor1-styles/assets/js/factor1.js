@@ -13,11 +13,29 @@ jQuery(document).ready(function(){
       data: { get_param: 'value'},
       dataType: 'json',
       success: function(posts){
+
         console.log('[Loaded Posts Successfully]');
+
+        jQuery('#resource-posts').empty();
+
         jQuery.each(posts, function(index, value){
+
+          //testing purposes only
           console.log(value);
-          console.log(this.title.rendered);
+
+          // Get Post Values
+          var postTitle       = this.title.rendered,
+              postExcerpt     = this.excerpt.rendered,
+              postDate        = this.date,
+              postThumbnail   = this.featured_media,
+              postCat         = this.resource_category[0],
+              postTag         = this.resource_tag,
+              postPermalink   = this.link;
+
+          jQuery('#resource-posts').append('<div class="row"><div class="col-3 text-center">Featured Image</div><div class="col-9"><h2>' + postTitle + '</h2></div></div>');
+
         });
+
       }
     });
   }
