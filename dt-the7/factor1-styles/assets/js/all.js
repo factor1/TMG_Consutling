@@ -56,7 +56,21 @@ jQuery(document).ready(function(){
             }
           }
 
-          jQuery('#resource-posts').append('<div class="row"><div class="col-3 text-center">Featured Image</div><div class="col-9"><h2>' + postTitle + '</h2><span class="resource-post-date">' + postDate + '</span> <span class="resource-category">' + postCat + '</span> | <span class="resource-topics">Topics</span>' + postTag + postExcerpt + postButton + '</div></div>');
+          // Get Post Thumbnail URL
+          if( postThumbnail !== 0 ){
+            jQuery.ajax({
+              method: 'GET',
+              url: siteURL + '/wp-json/wp/v2/media/' + postThumbnail,
+              data: { get_param: 'value'},
+              dataType: 'json',
+              success: function(image){
+                postThumbnailURL = '<img src="' + image.media_details.sizes.full.source_url + '" alt="' + postTitle + '">';
+              }
+            });
+          }
+
+          // Do the magic!
+          jQuery('#resource-posts').append('<div class="row"><div class="col-3 text-center">' + postThumbnailURL + '</div><div class="col-9"><h2>' + postTitle + '</h2><span class="resource-post-date">' + postDate + '</span> <span class="resource-category">' + postCat + '</span> | <span class="resource-topics">Topics</span>' + postTag + postExcerpt + postButton + '</div></div>');
 
         });
 
