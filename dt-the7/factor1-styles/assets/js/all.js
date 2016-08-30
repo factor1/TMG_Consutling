@@ -66,7 +66,7 @@ jQuery(document).ready(function(){
                 data: { get_param: 'value'},
                 dataType: 'json',
                 success: function(image){
-                  console.log('[Successfully fetched featured image]');
+                  console.log('[Successfully fetched featured image id'+ postThumbnail +']');
                   return '<img src="' + image.media_details.sizes.full.source_url + '" alt="' + postTitle + '">';
                 },
                 error: function(){
