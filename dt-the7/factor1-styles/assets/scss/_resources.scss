@@ -74,7 +74,7 @@ img{
 
 // Buttons
 .resource-button{
-  display: block;
+  display: inline-block;
   position: relative;
   background: $primary;
   color: white;
@@ -82,7 +82,9 @@ img{
   padding: 12px 10px 10px;
   opacity: 1;
   transition: opacity .3s ease;
+  text-decoration: none;
   &:hover{
     opacity: 0.8;
+    color: white;
   }
 }
