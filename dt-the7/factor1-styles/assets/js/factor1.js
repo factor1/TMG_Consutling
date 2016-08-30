@@ -64,7 +64,7 @@ jQuery(document).ready(function(){
               data: { get_param: 'value'},
               dataType: 'json',
               success: function(image){
-                postThumbnailURL = '<img src="' + image.media_details.sizes.full.source_url + '" alt="' + postTitle + '">';
+                var postThumbnailURL = '<img src="' + image.media_details.sizes.full.source_url + '" alt="' + postTitle + '">';
               }
             });
           }
