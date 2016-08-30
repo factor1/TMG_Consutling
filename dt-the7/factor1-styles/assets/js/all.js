@@ -67,7 +67,7 @@ jQuery(document).ready(function(){
                 dataType: 'json',
                 success: function(image){
                   console.log('[Successfully fetched featured image id'+ postThumbnail +']');
-                  return '<img src="' + image.media_details.sizes.full.source_url + '" alt="' + postTitle + '">';
+                  return image.media_details.sizes.full.source_url;
                 },
                 error: function(){
                   console.log('[Fetching featured image failed!]');
@@ -78,7 +78,7 @@ jQuery(document).ready(function(){
 
 
           // Do the magic!
-          jQuery('#resource-posts').append('<div class="row"><div class="col-3 text-center">' + 'getThumbnail()' + '</div><div class="col-9"><h2>' + postTitle + '</h2><span class="resource-post-date">' + postDate + '</span> <span class="resource-category">' + postCat + '</span> | <span class="resource-topics">Topics</span>' + postTag + postExcerpt + postButton + '</div></div>');
+          jQuery('#resource-posts').append('<div class="row"><div class="col-3 text-center"><img src="' + getThumbnail() + '"></div><div class="col-9"><h2>' + postTitle + '</h2><span class="resource-post-date">' + postDate + '</span> <span class="resource-category">' + postCat + '</span> | <span class="resource-topics">Topics</span>' + postTag + postExcerpt + postButton + '</div></div>');
 
         });
 
