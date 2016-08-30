@@ -71,7 +71,7 @@ jQuery(document).ready(function(){
 
                   sourceURLString = String(sourceURL);
 
-                  return sourceURL;
+                  return sourceURLString;
                 },
                 error: function(){
                   console.log('[Fetching featured image failed!]');
