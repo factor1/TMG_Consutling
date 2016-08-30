@@ -9,7 +9,7 @@ jQuery(document).ready(function(){
     console.log('Has correct body class for Rest API');
     jQuery.ajax({
       method: 'GET',
-      url: siteURL + '/wp-json/wp/v2/tmg_resources/',
+      url: siteURL + '/wp-json/wp/v2/tmg_resources/?_embed',
       data: { get_param: 'value'},
       dataType: 'json',
       success: function(posts){
