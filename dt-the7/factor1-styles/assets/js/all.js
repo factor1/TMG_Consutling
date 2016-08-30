@@ -32,6 +32,7 @@ jQuery(document).ready(function(){
               postCat         = this.resource_category[0],
               postTag         = this.resource_tag,
               postPermalink   = this.link,
+              postThumbnailURL= '',
               resourceType    = this.acf.resource_type,
               resourceUpload  = this.acf.resource_upload;
 
@@ -64,7 +65,7 @@ jQuery(document).ready(function(){
               data: { get_param: 'value'},
               dataType: 'json',
               success: function(image){
-                var postThumbnailURL = '<img src="' + image.media_details.sizes.full.source_url + '" alt="' + postTitle + '">';
+                postThumbnailURL = '<img src="' + image.media_details.sizes.full.source_url + '" alt="' + postTitle + '">';
               }
             });
           }
