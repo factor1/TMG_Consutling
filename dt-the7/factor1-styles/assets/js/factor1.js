@@ -21,9 +21,6 @@ jQuery(document).ready(function(){
 
         jQuery.each(posts, function(index, value){
 
-          //testing purposes only
-          console.log(value);
-
           // Get Post Values
           var postTitle       = this.title.rendered,
               postExcerpt     = this.excerpt.rendered,
@@ -31,6 +28,7 @@ jQuery(document).ready(function(){
               postThumbnail   = this._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url,
               postCat         = this.resource_category[0],
               postTag         = this.resource_tag,
+              postTerms       = this._embedded['wp:term'],
               postPermalink   = this.link,
               resourceType    = this.acf.resource_type,
               resourceUpload  = this.acf.resource_upload;
@@ -55,6 +53,13 @@ jQuery(document).ready(function(){
               postButton = '<a href="' + postPermalink + '" class="resource-button">Download</a>';
             }
           }
+
+          // Determine what Terms the post is associated with
+          console.log(postTerms);
+
+          jQuery.each(postTerms, function(index, value){
+            console.log(this.taxonomy);
+          });
 
           // Do the magic!
           jQuery('#resource-posts').append('<div class="row"><div class="col-3 text-center"><img src="' + postThumbnail + '"></div><div class="col-9"><h2>' + postTitle + '</h2><span class="resource-post-date">' + postDate + '</span> <span class="resource-category">' + postCat + '</span> | <span class="resource-topics">Topics</span>' + postTag + postExcerpt + postButton + '</div></div>');
