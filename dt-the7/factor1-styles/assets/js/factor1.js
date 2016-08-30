@@ -68,7 +68,9 @@ jQuery(document).ready(function(){
                 success: function(image){
                   console.log('[Successfully fetched featured image id'+ postThumbnail +']');
                   var sourceURL = image.media_details.sizes.full.source_url;
-                  
+
+                  sourceURLString = String(sourceURL);
+
                   return sourceURL;
                 },
                 error: function(){
