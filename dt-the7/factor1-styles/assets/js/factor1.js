@@ -58,6 +58,10 @@ jQuery(document).ready(function(){
           jQuery.each(postTerms, function(i){
             //console.log(this[0].taxonomy);
 
+            jQuery.each(this[i], function(x){
+              console.log('There are ' + x + ' items');
+            });
+
             var termType = this[i].taxonomy,
                 termName = this[i].name;
 
