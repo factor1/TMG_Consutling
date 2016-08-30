@@ -1,7 +1,8 @@
 console.log('[Success! - Factor1 JS Initialized]');
 
 // set crucial variables
-var siteURL = 'http://factor1.me/2016/tmg';
+var siteURL = 'http://factor1.me/2016/tmg',
+    postThumbnailURL = '';
 
 // if we are on the archive page, load initial posts
 jQuery(document).ready(function(){
@@ -32,7 +33,6 @@ jQuery(document).ready(function(){
               postCat         = this.resource_category[0],
               postTag         = this.resource_tag,
               postPermalink   = this.link,
-              postThumbnailURL= '',
               resourceType    = this.acf.resource_type,
               resourceUpload  = this.acf.resource_upload;
 
