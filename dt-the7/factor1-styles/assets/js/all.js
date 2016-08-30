@@ -58,20 +58,14 @@ jQuery(document).ready(function(){
           jQuery.each(postTerms, function(i){
             //console.log(this[0].taxonomy);
 
-            jQuery.each(this[i], function(index, value){
-              //console.log('There are ' + index + ' items');
-              //console.log(this);
-              console.log(this[i].name);
-            });
+            var termType = this[i].taxonomy,
+                termName = this[i].name;
 
-            // var termType = this[i].taxonomy,
-            //     termName = this[i].name;
-            //
-            // if( termType == 'resource_category' ){
-            //   postCat.push(termName);
-            // } else{
-            //   postTag.push(termName);
-            // }
+            if( termType == 'resource_category' ){
+              postCat.push(termName);
+            } else{
+              postTag.push(termName);
+            }
 
           });
 
