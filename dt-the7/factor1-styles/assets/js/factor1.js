@@ -38,6 +38,11 @@ jQuery(document).ready(function(){
           // Check if user is logged in to determine button outputs
           if( loggedin === false ){
             console.log('[User not logged in]');
+            if( resourceType == "free" ){
+              postButton = '<a href="' + postPermalink + '" class="resource-button">Download</a>';
+            } else{
+              postButton = '<a href="#" class="resource-button">Login to download</a>';
+            }
           } else{
             // User is logged in...
             console.log('[User is logged in]');
