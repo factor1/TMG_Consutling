@@ -26,8 +26,8 @@ jQuery(document).ready(function(){
               postExcerpt     = this.excerpt.rendered,
               postDate        = this.date,
               postThumbnail   = this._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url,
-              postCat         = this.resource_category[0],
-              postTag         = this.resource_tag,
+              postCat         = [],
+              postTag         = [],
               postTerms       = this._embedded['wp:term'],
               postPermalink   = this.link,
               resourceType    = this.acf.resource_type,
@@ -56,11 +56,23 @@ jQuery(document).ready(function(){
 
           // Determine what Terms the post is associated with
           jQuery.each(postTerms, function(index, value){
-            console.log(this[0].taxonomy);
+            //console.log(this[0].taxonomy);
+
+            var termType = this[0].taxonomy,
+                termName = this[0].name;
+
+            if( termType == 'resource_category' ){
+              postCat.push(termName);
+            } else{
+              postTag.push(termName);
+            }
+
           });
 
+          console.log(postCat);
+          console.log(postTag);
           // Do the magic!
-          jQuery('#resource-posts').append('<div class="row"><div class="col-3 text-center"><img src="' + postThumbnail + '"></div><div class="col-9"><h2>' + postTitle + '</h2><span class="resource-post-date">' + postDate + '</span> <span class="resource-category">' + postCat + '</span> | <span class="resource-topics">Topics</span>' + postTag + postExcerpt + postButton + '</div></div>');
+          jQuery('#resource-posts').append('<div class="row"><div class="col-3 text-center"><img src="' + postThumbnail + '"></div><div class="col-9"><h2>' + postTitle + '</h2><span class="resource-post-date">' + postDate + '</span> <span class="resource-category">' + 'postCat' + '</span> | <span class="resource-topics">Topics</span>' + 'postTag' + postExcerpt + postButton + '</div></div>');
 
         });
 
