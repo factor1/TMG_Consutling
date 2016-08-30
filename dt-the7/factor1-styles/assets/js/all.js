@@ -18,6 +18,8 @@ jQuery(document).ready(function(){
 
         if( loggedin === false ){
           console.log('Not logged in!');
+        } else{
+          console.log('User is logged in!');
         }
 
         jQuery('#resource-posts').empty();

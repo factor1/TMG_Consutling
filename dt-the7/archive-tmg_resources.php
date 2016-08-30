@@ -89,7 +89,7 @@ get_header();
 </section>
 
 <script>
-  var loggedin = false;
+  var loggedin = true;
 </script>
 
 <?php
