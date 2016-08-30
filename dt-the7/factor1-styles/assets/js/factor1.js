@@ -67,7 +67,8 @@ jQuery(document).ready(function(){
                 dataType: 'json',
                 success: function(image){
                   console.log('[Successfully fetched featured image id'+ postThumbnail +']');
-                  return image.media_details.sizes.full.source_url;
+                  var sourceURL = image.media_details.sizes.full.source_url;
+                  console.log(sourceURL);
                 },
                 error: function(){
                   console.log('[Fetching featured image failed!]');
