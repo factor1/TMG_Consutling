@@ -58,7 +58,7 @@ jQuery(document).ready(function(){
           jQuery.each(postTerms, function(index, value){
             //console.log(this[0].taxonomy);
 
-            jQuery.each(this, function(index, value){
+            jQuery.map(this, function(index, value){
 
               var termType = this[index].taxonomy,
                   termName = this[index].name;
