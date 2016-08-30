@@ -88,5 +88,9 @@ get_header();
   </div>
 </section>
 
+<script>
+  var loggedin = false;
+</script>
+
 <?php
 get_footer();

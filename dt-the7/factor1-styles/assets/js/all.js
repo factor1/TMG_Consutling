@@ -16,6 +16,10 @@ jQuery(document).ready(function(){
 
         console.log('[Loaded Posts Successfully]');
 
+        if( loggedin === false ){
+          console.log('Not logged in!');
+        }
+
         jQuery('#resource-posts').empty();
 
         jQuery.each(posts, function(index, value){
