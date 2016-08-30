@@ -71,3 +71,18 @@ img{
   max-width: 100%;
   height: auto;
 }
+
+// Buttons
+.resource-button{
+  display: block;
+  position: relative;
+  background: $primary;
+  color: white;
+  text-align: center;
+  padding: 12px 10px 10px;
+  opacity: 1;
+  transition: opacity .3s ease;
+  &:hover{
+    opacity: 0.8;
+  }
+}
