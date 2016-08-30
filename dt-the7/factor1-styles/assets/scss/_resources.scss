@@ -65,6 +65,10 @@ $primary:   $blue;
 // Post Grid
 #resource-posts.container{
   margin: 50px auto;
+  img{
+    border: 5px solid white;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.3);
+  }
 }
 
 img{
