@@ -58,7 +58,7 @@ jQuery(document).ready(function(){
           }
 
           // Get Post Thumbnail URL
-          var getThumbnail = function(){
+          var getThumbnail = function(postThumbnailURL){
             if( postThumbnail !== 0 ){
               jQuery.ajax({
                 method: 'GET',
