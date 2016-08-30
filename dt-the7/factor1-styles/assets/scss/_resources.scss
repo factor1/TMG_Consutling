@@ -79,6 +79,12 @@ img{
 // Resource title
 .resource-title{
   color: $primary;
+  margin-bottom: 0;
+}
+
+// Post Meta Data
+.resource-post-date, .resource-category, .resource-topics{
+  font-size: 14px;
 }
 
 // Buttons
