@@ -35,7 +35,7 @@ jQuery(document).ready(function(){
               resourceUpload  = this.acf.resource_upload;
 
 
-          jQuery('#resource-posts').append('<div class="row"><div class="col-3 text-center">Featured Image</div><div class="col-9"><h2>' + postTitle + '</h2><span class="resource-post-date">' + postDate + '</span> <span class="resource-category">' + postCat + '</span> | <span class="resource-topics">Topics</span>' + postTag + '</div></div>');
+          jQuery('#resource-posts').append('<div class="row"><div class="col-3 text-center">Featured Image</div><div class="col-9"><h2>' + postTitle + '</h2><span class="resource-post-date">' + postDate + '</span> <span class="resource-category">' + postCat + '</span> | <span class="resource-topics">Topics</span>' + postTag + postExcerpt + '</div></div>');
 
         });
 
