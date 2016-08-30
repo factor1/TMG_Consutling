@@ -59,8 +59,9 @@ jQuery(document).ready(function(){
             //console.log(this[0].taxonomy);
 
             jQuery.each(this[i], function(index, value){
-              console.log('There are ' + index + ' items');
-              console.log(this);
+              //console.log('There are ' + index + ' items');
+              //console.log(this);
+              console.log(this.name);
             });
 
             // var termType = this[i].taxonomy,
