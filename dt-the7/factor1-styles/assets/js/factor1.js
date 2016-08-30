@@ -72,7 +72,7 @@ jQuery(document).ready(function(){
           console.log(postCat);
           console.log(postTag);
           // Do the magic!
-          jQuery('#resource-posts').append('<div class="row" style="margin-bottom: 40px;"><div class="col-3 text-center"><img src="' + postThumbnail + '"></div><div class="col-9"><h2 class="resource-title">' + postTitle + '</h2><span class="resource-post-date">' + postDate + '</span> <span class="resource-category">' + 'postCat' + '</span> | <span class="resource-topics">Topics</span>' + 'postTag' + postExcerpt + postButton + '</div></div>');
+          jQuery('#resource-posts').append('<div class="row" style="margin-bottom: 40px;"><div class="col-3 text-center"><img src="' + postThumbnail + '"></div><div class="col-9"><h2 class="resource-title">' + postTitle + '</h2><span class="resource-post-date">' + postDate + '</span> <span class="resource-category">' + 'postCat' + '</span> | <span class="resource-topics">Topics:</span>' + ' postTags ' + postExcerpt + postButton + '</div></div>');
 
         });
 
