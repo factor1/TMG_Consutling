@@ -28,7 +28,7 @@ jQuery(document).ready(function(){
           var postTitle       = this.title.rendered,
               postExcerpt     = this.excerpt.rendered,
               postDate        = this.date,
-              postThumbnail   = this._embedded['wp:featuredmedia'][0].media_details.sizes.large.source_url,
+              postThumbnail   = this._embedded['wp:featuredmedia'][0].media_details.sizes.full.source_url,
               postCat         = this.resource_category[0],
               postTag         = this.resource_tag,
               postPermalink   = this.link,
