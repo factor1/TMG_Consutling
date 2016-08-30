@@ -55,11 +55,11 @@ jQuery(document).ready(function(){
           }
 
           // Determine what Terms the post is associated with
-          jQuery.each(postTerms, function(i){
+          jQuery.each(postTerms, function(i, value){
             //console.log(this[0].taxonomy);
 
-            var termType = this[i].taxonomy,
-                termName = this[i].name;
+            var termType = this[0].taxonomy,
+                termName = this[0].name;
 
             if( termType == 'resource_category' ){
               postCat.push(termName);
