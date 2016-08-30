@@ -58,8 +58,8 @@ jQuery(document).ready(function(){
           jQuery.each(postTerms, function(index, value){
             //console.log(this[0].taxonomy);
 
-            var termType = this[0].taxonomy,
-                termName = this[0].name;
+            var termType = this[index].taxonomy,
+                termName = this[index].name;
 
             if( termType == 'resource_category' ){
               postCat.push(termName);
