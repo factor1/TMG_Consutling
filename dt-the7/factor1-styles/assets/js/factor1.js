@@ -16,10 +16,11 @@ jQuery(document).ready(function(){
 
         console.log('[Loaded Posts Successfully]');
 
+        // Check if user is logged in
         if( loggedin === false ){
-          console.log('Not logged in!');
+          console.log('[User not logged in]');
         } else{
-          console.log('User is logged in!');
+          console.log('[User is logged in]');
         }
 
         jQuery('#resource-posts').empty();

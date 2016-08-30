@@ -88,9 +88,15 @@ get_header();
   </div>
 </section>
 
-<script>
-  var loggedin = true;
-</script>
+<?php if( is_user_logged_in() ):?>
+  <script>
+    var loggedin = true;
+  </script>
+<?php else: ?>
+  <script>
+    var loggedin = false;
+  </script>
+<?php endif;?>
 
 <?php
 get_footer();
