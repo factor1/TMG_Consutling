@@ -16,12 +16,6 @@ jQuery(document).ready(function(){
 
         console.log('[Loaded Posts Successfully]');
 
-        // Check if user is logged in
-        if( loggedin === false ){
-          console.log('[User not logged in]');
-        } else{
-          console.log('[User is logged in]');
-        }
 
         jQuery('#resource-posts').empty();
 
@@ -41,8 +35,23 @@ jQuery(document).ready(function(){
               resourceType    = this.acf.resource_type,
               resourceUpload  = this.acf.resource_upload;
 
+          // Check if user is logged in to determine button outputs
+          if( loggedin === false ){
+            console.log('[User not logged in]');
+          } else{
+            // User is logged in...
+            console.log('[User is logged in]');
 
-          jQuery('#resource-posts').append('<div class="row"><div class="col-3 text-center">Featured Image</div><div class="col-9"><h2>' + postTitle + '</h2><span class="resource-post-date">' + postDate + '</span> <span class="resource-category">' + postCat + '</span> | <span class="resource-topics">Topics</span>' + postTag + postExcerpt + '</div></div>');
+            // determine the resource type
+            if( resourceType == "free" ){
+              postButton = '<a href="' + resourceUpload + '" class="resource-button">Download</a>';
+            } else{
+              // members only content
+              postButton = '<a href="' + postPermalink + '" class="resource-button">Download</a>';
+            }
+          }
+
+          jQuery('#resource-posts').append('<div class="row"><div class="col-3 text-center">Featured Image</div><div class="col-9"><h2>' + postTitle + '</h2><span class="resource-post-date">' + postDate + '</span> <span class="resource-category">' + postCat + '</span> | <span class="resource-topics">Topics</span>' + postTag + postExcerpt + postButton + '</div></div>');
 
         });
 
