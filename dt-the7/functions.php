@@ -88,3 +88,6 @@ add_action( 'wp_enqueue_scripts', 'f1_styles' );
 
 
 		  }
+
+// Add new Image Size for Resources
+add_image_size('resources', 212, 212, array('center', 'center'));
