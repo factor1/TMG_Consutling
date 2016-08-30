@@ -58,24 +58,27 @@ jQuery(document).ready(function(){
           }
 
           // Get Post Thumbnail URL
-          if( postThumbnail !== 0 ){
-            jQuery.ajax({
-              method: 'GET',
-              url: siteURL + '/wp-json/wp/v2/media/' + postThumbnail,
-              data: { get_param: 'value'},
-              dataType: 'json',
-              success: function(image){
-                console.log('[Successfully fetched featured image]');
-                postThumbnailURL = '<img src="' + image.media_details.sizes.full.source_url + '" alt="' + postTitle + '">';
-              },
-              error: function(){
-                console.log('[Fetching featured image failed!]');
-              }
-            });
-          }
+          var getThumbnail = function(){
+            if( postThumbnail !== 0 ){
+              jQuery.ajax({
+                method: 'GET',
+                url: siteURL + '/wp-json/wp/v2/media/' + postThumbnail,
+                data: { get_param: 'value'},
+                dataType: 'json',
+                success: function(image){
+                  console.log('[Successfully fetched featured image]');
+                  return '<img src="' + image.media_details.sizes.full.source_url + '" alt="' + postTitle + '">';
+                },
+                error: function(){
+                  console.log('[Fetching featured image failed!]');
+                }
+              });
+            }
+          };
+
 
           // Do the magic!
-          jQuery('#resource-posts').append('<div class="row"><div class="col-3 text-center">' + postThumbnailURL + '</div><div class="col-9"><h2>' + postTitle + '</h2><span class="resource-post-date">' + postDate + '</span> <span class="resource-category">' + postCat + '</span> | <span class="resource-topics">Topics</span>' + postTag + postExcerpt + postButton + '</div></div>');
+          jQuery('#resource-posts').append('<div class="row"><div class="col-3 text-center">' + getThumbnail() + '</div><div class="col-9"><h2>' + postTitle + '</h2><span class="resource-post-date">' + postDate + '</span> <span class="resource-category">' + postCat + '</span> | <span class="resource-topics">Topics</span>' + postTag + postExcerpt + postButton + '</div></div>');
 
         });
 
