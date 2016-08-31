@@ -134,7 +134,6 @@ endif;?>
 </div>
 
 <script>
-$.noConflict();
 // Modal JS
 jQuery('.f1login').click(function() {
   console.log('button clicked');
