@@ -135,3 +135,26 @@ img{
     box-shadow: 0 0 10px 0px rgba(0,0,0,.3);
   }
 }
+
+// Modal Styles
+#f1-modal.modal{
+  display: none;
+  position: fixed;
+  margin-left: -300px;
+  width: 600px;
+  top: 200px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background: white;
+  z-index: 9999;
+  box-shadow: 0 0 10px 0px rgba(0,0,0,.3);
+}
+
+@media screen and (max-width: 600px){
+  #f1-modal.modal{
+    width: 100%;
+    margin-left: 0;
+    left: 0;
+  }
+}

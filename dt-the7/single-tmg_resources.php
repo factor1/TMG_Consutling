@@ -49,11 +49,11 @@ if( have_posts() ):
       <?php else:
         // if the resource is members only
         if( get_field('resource_type') == 'members' ): ?>
-          <a href="#" class="resource-button">
+          <a id="#f1login" class="resource-button">
             Login To Download
           </a>
         <?php else: ?>
-          
+
         <?php endif;
       endif; ?>
     </div>
@@ -85,7 +85,7 @@ if( is_user_logged_in() === true || is_user_logged_in() === false && get_field('
             <?php else:
               // if the resource is members only
               if( get_field('resource_type') == 'members' ): ?>
-                <a href="#" class="resource-button">
+                <a id="#f1login" class="resource-button">
                   Login To Download
                 </a>
               <?php else:
@@ -116,5 +116,32 @@ if( is_user_logged_in() === true || is_user_logged_in() === false && get_field('
 
 
   endwhile;
-endif;
+endif;?>
+
+<div id="f1-modal" class="modal">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <form name="loginform" id="loginform" action="<?php echo get_home_url();?>/wp-login.php" method="post">
+        	<p>
+        		<label for="user_login">Username or Email<br />
+        		<input type="text" name="log" id="user_login" class="input" value="" size="20" /></label>
+        	</p>
+        	<p>
+        		<label for="user_pass">Password<br />
+        		<input type="password" name="pwd" id="user_pass" class="input" value="" size="20" /></label>
+        	</p>
+        		<p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever"  /> Remember Me</label></p>
+        	<p class="submit">
+        		<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Log In" />
+        		<input type="hidden" name="redirect_to" value="<?php echo get_home_url();?>/wp-admin/" />
+        		<input type="hidden" name="testcookie" value="1" />
+        	</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<?php
 get_footer(); ?>
