@@ -19,7 +19,7 @@ if( have_posts() ):
         if ( $terms && ! is_wp_error( $terms ) ) :
 
             foreach ( $terms as $term ) {
-              echo '<a href="'. $term->slug .'">';
+              echo '<a href="'. esc_url( get_term_link( $term ) ) .'">';
               echo $term->name;
               echo '</a>';
             }
