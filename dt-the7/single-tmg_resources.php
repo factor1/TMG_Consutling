@@ -64,7 +64,7 @@ if( have_posts() ):
 
 <?php
 // Show Content or form based on user status
-if( is_user_logged_in() ): ?>
+if( is_user_logged_in() === true || is_user_logged_in() === false && get_field('resource_type') === 'members' ): ?>
   <article id="single-resource" class="container">
     <div class="row">
       <div class="col-4 resource-single-image">
