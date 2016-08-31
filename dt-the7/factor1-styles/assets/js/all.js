@@ -21,6 +21,12 @@ jQuery(document).ready(function(){
 
         jQuery.each(posts, function(index, value){
 
+          // Get a posts featured image Media model.
+          post.getFeaturedImage().done( function( image ){
+          	// ... do something with image
+          	console.log( image );
+          } );
+
           // Get Post Values
           var postTitle       = this.title.rendered,
               postExcerpt     = this.excerpt.rendered,
