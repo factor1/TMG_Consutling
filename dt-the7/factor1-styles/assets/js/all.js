@@ -34,15 +34,6 @@ jQuery(document).ready(function(){
               resourceType    = this.acf.resource_type,
               resourceUpload  = this.acf.resource_upload;
 
-          // Load an existing post
-          var post = new wp.api.models.Post( { id: postID } );
-          post.fetch();
-
-          // Get a posts featured image Media model.
-          post.getFeaturedImage().done( function( image ){
-            // ... do something with image
-            console.log( image );
-          } );
 
           // Check if user is logged in to determine button outputs
           if( loggedin === false ){
