@@ -63,6 +63,47 @@ if( have_posts() ):
 </section>
 
 <?php
+// Show Content or form based on user status
+if( is_user_logged_in() ): ?>
+  <article class="container">
+    <div class="row">
+      <div class="col-4">
+        <?php the_post_thumbnail('resource_single'); ?>
+      </div>
+      <div class="col-8">
+        <div class="row">
+          <div class="col-12">
+            <?php the_content(); ?>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-right">
+            <?php
+            // Logic for if user is logged in
+            if( is_user_logged_in() ): ?>
+              <a href="<?php the_field('resource_upload');?>" class="resource-button">
+                Download
+              </a>
+            <?php else:
+              // if the resource is members only
+              if( get_field('resource_type') == 'members' ): ?>
+                <a href="#" class="resource-button">
+                  Login To Download
+                </a>
+              <?php else: ?>
+                <p>
+                  Fill out the form below to access your download.
+                </p>
+              <?php endif;
+            endif; ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+<?php endif;
+
+<?php
   endwhile;
 endif;
 get_footer(); ?>
