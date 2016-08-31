@@ -53,9 +53,7 @@ if( have_posts() ):
             Login To Download
           </a>
         <?php else: ?>
-          <p>
-            Fill out the form below to access your download.
-          </p>
+          
         <?php endif;
       endif; ?>
     </div>
