@@ -26,6 +26,7 @@ if( have_posts() ):
       </span>
       |
       <span class="resource-topics">
+        Topics: 
         <?php
         $terms = get_the_terms( get_the_ID(), 'resource_tag' );
 
