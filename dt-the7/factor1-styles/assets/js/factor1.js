@@ -85,5 +85,5 @@ jQuery(document).ready(function(){
 
 // Modal JS
 jQuery('#f1login').on('click', function(){
-  jQuery('#f1-modal').toggle();
+  jQuery('#f1-modal').show();
 });

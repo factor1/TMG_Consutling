@@ -140,9 +140,10 @@ img{
 #f1-modal.modal{
   display: none;
   position: fixed;
-  margin-left: -300px;
-  width: 600px;
+  margin-left: -200px;
+  width: 400px;
   top: 200px;
+  left: 50%;
   max-width: 100%;
   height: auto;
   border-radius: 8px;
@@ -151,7 +152,7 @@ img{
   box-shadow: 0 0 10px 0px rgba(0,0,0,.3);
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 400px){
   #f1-modal.modal{
     width: 100%;
     margin-left: 0;
