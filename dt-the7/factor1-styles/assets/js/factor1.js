@@ -82,10 +82,10 @@ jQuery(document).ready(function(){
     });
   }
 
-  // Modal JS
-  jQuery('.f1login').on('click', function(){
-    console.log('button clicked');
-    jQuery('#f1-modal.modal').css('display','block');
-  });
+});
 
+// Modal JS
+jQuery('.f1login').on('click', function(){
+  console.log('button clicked');
+  jQuery('#f1-modal.modal').css('display','block');
 });
