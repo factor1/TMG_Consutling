@@ -41,7 +41,7 @@ jQuery(document).ready(function(){
             if( resourceType == "free" ){
               postButton = '<a href="' + postPermalink + '" class="resource-button">Download</a>';
             } else{
-              postButton = '<a href="#" class="resource-button">Login to download</a>';
+              postButton = '<a href="#" class="resource-button f1login">Login to download</a>';
             }
           } else{
             // User is logged in...

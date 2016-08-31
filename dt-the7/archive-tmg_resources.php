@@ -98,5 +98,35 @@ get_header();
   </script>
 <?php endif;?>
 
+<div id="f1-modal" class="modal">
+  <div class="container">
+    <div class="row" style="margin-bottom: 30px;">
+      <div class="col-6 col-end text-right">
+        <a href="#" class="f1-close-thik"></a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center">
+        <?php wp_login_form(); ?>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Modal JS
+var $j = jQuery.noConflict();
+
+$j('.f1login').click(function() {
+  console.log('button clicked');
+  $j('#f1-modal.modal').css('display','block');
+});
+
+$j('.f1-close-thik').click(function(){
+  console.log('close clicked');
+  $j('#f1-modal.modal').css('display','none');
+});
+</script>
+
 <?php
 get_footer();
