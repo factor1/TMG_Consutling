@@ -135,14 +135,16 @@ endif;?>
 
 <script>
 // Modal JS
-jQuery('.f1login').click(function() {
+var $j = jQuery.noConflict();
+
+$j('.f1login').click(function() {
   console.log('button clicked');
-  jQuery('#f1-modal.modal').css('display','block');
+  $j('#f1-modal.modal').css('display','block');
 });
 
-jQuery('.f1-close-thik').click(function(){
+$j('.f1-close-thik').click(function(){
   console.log('close clicked');
-  jQuery('#f1-modal.modal').css('display','none');
+  $j('#f1-modal.modal').css('display','none');
 });
 </script>
 
