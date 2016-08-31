@@ -21,14 +21,9 @@ jQuery(document).ready(function(){
 
         jQuery.each(posts, function(index, value){
 
-          // Get a posts featured image Media model.
-          post.getFeaturedImage().done( function( image ){
-          	// ... do something with image
-          	console.log( image );
-          } );
-
           // Get Post Values
           var postTitle       = this.title.rendered,
+              postID          = this.id,
               postExcerpt     = this.excerpt.rendered,
               postDate        = this.date,
               postThumbnail   = this._embedded['wp:featuredmedia'][0].media_details.sizes.resources.source_url,
@@ -38,6 +33,16 @@ jQuery(document).ready(function(){
               postPermalink   = this.link,
               resourceType    = this.acf.resource_type,
               resourceUpload  = this.acf.resource_upload;
+
+          // Load an existing post
+          var post = new wp.api.models.Post( { id: postID } );
+          post.fetch();
+
+          // Get a posts featured image Media model.
+          post.getFeaturedImage().done( function( image ){
+            // ... do something with image
+            console.log( image );
+          } );
 
           // Check if user is logged in to determine button outputs
           if( loggedin === false ){
