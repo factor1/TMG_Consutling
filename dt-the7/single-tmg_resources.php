@@ -49,7 +49,7 @@ if( have_posts() ):
       <?php else:
         // if the resource is members only
         if( get_field('resource_type') == 'members' ): ?>
-          <a id="#f1login" class="resource-button">
+          <a id="f1login" class="resource-button">
             Login To Download
           </a>
         <?php else: ?>
@@ -85,7 +85,7 @@ if( is_user_logged_in() === true || is_user_logged_in() === false && get_field('
             <?php else:
               // if the resource is members only
               if( get_field('resource_type') == 'members' ): ?>
-                <a id="#f1login" class="resource-button">
+                <a id="f1login" class="resource-button">
                   Login To Download
                 </a>
               <?php else:
