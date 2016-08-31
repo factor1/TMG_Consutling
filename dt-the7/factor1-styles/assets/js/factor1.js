@@ -81,9 +81,10 @@ jQuery(document).ready(function(){
       }
     });
   }
-});
 
-// Modal JS
-jQuery('#f1login').on('click', function(){
-  jQuery('#f1-modal.modal').show();
+  // Modal JS
+  jQuery('#f1login').on('click', function(){
+    jQuery('#f1-modal.modal').show();
+  });
+  
 });
