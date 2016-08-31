@@ -108,6 +108,7 @@ img{
   opacity: 1;
   transition: opacity .3s ease;
   text-decoration: none;
+  cursor: pointer;
   &:hover{
     opacity: 0.8;
     color: white;
