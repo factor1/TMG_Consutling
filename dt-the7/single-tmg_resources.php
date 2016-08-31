@@ -101,6 +101,27 @@ if( is_user_logged_in() === true || is_user_logged_in() === false && get_field('
       </div>
     </div>
   </article>
+
+<?php else: ?>
+  <article id="single-resource" class="container">
+    <div class="row">
+      <div class="col-4 resource-single-image">
+        <?php the_post_thumbnail('resource_single'); ?>
+      </div>
+      <div class="col-8">
+        <?php
+        gravity_form( 22, false, false, false, '', false );
+
+        add_action( 'gform_after_submission_22', 'download_resource', 10, 2 );
+          function download_resource( $entry, $form ) {
+
+            echo '<h2>This hook worked!';
+
+          }
+        ?>
+      </div>
+    </div>
+  </article>
 <?php endif;
 
 
