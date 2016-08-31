@@ -152,7 +152,6 @@ img{
   box-shadow: 0 0 10px 0px rgba(0,0,0,.3);
   form{
     margin: 20px auto;
-    text-align: left;
   }
 }
 
@@ -164,6 +163,8 @@ img{
   text-decoration: none;
   text-shadow: 0 1px 0 #fff;
   top: 5px;
+  margin-top: 9px;
+  margin-right: 9px;
 }
 .f1-close-thik:after {
   content: '✖'; /* UTF-8 symbol */
