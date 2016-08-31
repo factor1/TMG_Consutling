@@ -26,7 +26,7 @@ if( have_posts() ):
       </span>
       |
       <span class="resource-topics">
-        Topics: 
+        Topics:
         <?php
         $terms = get_the_terms( get_the_ID(), 'resource_tag' );
 
@@ -38,6 +38,26 @@ if( have_posts() ):
           }
         endif; ?>
       </span>
+    </div>
+    <div class="col-3 text-right">
+      <?php
+      // Logic for if user is logged in
+      if( is_user_logged_in() ): ?>
+        <a href="<?php the_field('resource_upload');?>" class="resource-button">
+          Download
+        </a>
+      <?php else:
+        // if the resource is members only
+        if( get_field('resource_type') == 'members' ): ?>
+          <a href="#" class="resource-button">
+            Login To Download
+          </a>
+        <?php else: ?>
+          <p>
+            Fill out the form below to access your download.
+          </p>
+        <?php endif;
+      endif; ?>
     </div>
   </div>
 </section>
