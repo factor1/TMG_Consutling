@@ -33,7 +33,7 @@ if( have_posts() ):
           foreach ( $terms as $term ) {
             echo '<a href="'. esc_url( get_term_link( $term ) ) .'">';
             echo $term->name;
-            echo '</a>';
+            echo '</a> ';
           }
         endif; ?>
       </span>
