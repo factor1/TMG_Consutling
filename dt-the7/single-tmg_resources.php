@@ -3,7 +3,7 @@ if( have_posts() ):
   while( have_posts() ): the_post();
 ?>
 
-<section class="container">
+<section id="resource-single-header" class="container">
   <div class="row">
     <div class="col-9">
       <h1>
@@ -65,9 +65,9 @@ if( have_posts() ):
 <?php
 // Show Content or form based on user status
 if( is_user_logged_in() ): ?>
-  <article class="container">
+  <article id="single-resource" class="container">
     <div class="row">
-      <div class="col-4">
+      <div class="col-4 resource-single-image">
         <?php the_post_thumbnail('resource_single'); ?>
       </div>
       <div class="col-8">

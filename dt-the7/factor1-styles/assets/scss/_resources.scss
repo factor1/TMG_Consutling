@@ -113,3 +113,25 @@ img{
     color: white;
   }
 }
+
+// Single Page Style Overrides
+.single-tmg_resources{
+  .page-title.title-center.solid-bg{
+    display: none;
+  }
+}
+
+#resource-single-header .container{
+  margin: 50px auto 0;
+}
+
+#single-resource .container{
+  margin: 30px auto;
+}
+
+.resource-single-image{
+  img{
+    border: 5px solid white;
+    box-shadow: 0 0 10px 0px rgba(0,0,0,.3);
+  }
+}
