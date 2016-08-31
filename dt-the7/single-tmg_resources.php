@@ -90,11 +90,9 @@ if( is_user_logged_in() === true || is_user_logged_in() === false && get_field('
                 <a href="#" class="resource-button">
                   Login To Download
                 </a>
-              <?php else: ?>
-                <p>
-                  Fill out the form below to access your download.
-                </p>
-              <?php endif;
+              <?php else:
+                // ssshhh
+              endif;
             endif; ?>
           </div>
         </div>
@@ -109,6 +107,7 @@ if( is_user_logged_in() === true || is_user_logged_in() === false && get_field('
         <?php the_post_thumbnail('resource_single'); ?>
       </div>
       <div class="col-8">
+        <p>Please fill out the form below to access your resource.</p>
         <?php
         gravity_form( 22, false, false, false, '', false );
         ?>
