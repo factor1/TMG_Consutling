@@ -5,7 +5,7 @@ if( have_posts() ):
 
 <section class="container">
   <div class="row">
-    <div class="col-6">
+    <div class="col-9">
       <h1>
         <?php the_title();?>
       </h1>
@@ -19,11 +19,11 @@ if( have_posts() ):
         if ( $terms && ! is_wp_error( $terms ) ) :
 
             foreach ( $terms as $term ) {
-              echo '<a href="#">';
+              echo '<a href="'. $term->slug .'">';
               echo $term->name;
               echo '</a>';
             }
-                                
+
             ?>
 
         <?php endif; ?>
