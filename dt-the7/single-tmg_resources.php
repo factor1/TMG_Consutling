@@ -141,6 +141,7 @@ jQuery('.f1login').click(function() {
 });
 
 jQuery('.f1-close-thik').click(function(){
+  console.log('close clicked');
   jQuery('#f1-modal.modal').css('display','none');
 });
 </script>
