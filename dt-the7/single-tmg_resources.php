@@ -121,6 +121,11 @@ endif;?>
 <div id="f1-modal" class="modal">
   <div class="container">
     <div class="row">
+      <div class="col-6 col-end text-right">
+        <a href="#" class="f1-close-thik"></a>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-12 text-center">
         <form name="loginform" id="loginform" action="<?php echo get_home_url();?>/wp-login.php" method="post">
         	<p>
