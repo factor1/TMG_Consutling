@@ -17,16 +17,25 @@ if( have_posts() ):
         $terms = get_the_terms( get_the_ID(), 'resource_category' );
 
         if ( $terms && ! is_wp_error( $terms ) ) :
+          foreach ( $terms as $term ) {
+            echo '<a href="'. esc_url( get_term_link( $term ) ) .'">';
+            echo $term->name;
+            echo '</a>';
+          }
+        endif; ?>
+      </span>
+      |
+      <span class="resource-topics">
+        <?php
+        $terms = get_the_terms( get_the_ID(), 'resource_tag' );
 
-            foreach ( $terms as $term ) {
-              echo '<a href="'. esc_url( get_term_link( $term ) ) .'">';
-              echo $term->name;
-              echo '</a>';
-            }
-
-            ?>
-
-        <?php endif; ?>
+        if ( $terms && ! is_wp_error( $terms ) ) :
+          foreach ( $terms as $term ) {
+            echo '<a href="'. esc_url( get_term_link( $term ) ) .'">';
+            echo $term->name;
+            echo '</a>';
+          }
+        endif; ?>
       </span>
     </div>
   </div>
