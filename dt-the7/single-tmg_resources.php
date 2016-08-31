@@ -111,13 +111,6 @@ if( is_user_logged_in() === true || is_user_logged_in() === false && get_field('
       <div class="col-8">
         <?php
         gravity_form( 22, false, false, false, '', false );
-
-        add_action( 'gform_after_submission_22', 'download_resource', 10, 2 );
-          function download_resource( $entry, $form ) {
-
-            echo '<h2>This hook worked!';
-
-          }
         ?>
       </div>
     </div>

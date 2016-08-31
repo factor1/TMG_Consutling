@@ -91,3 +91,11 @@ add_action( 'wp_enqueue_scripts', 'f1_styles' );
 
 // Add new Image Size for Resources
 add_image_size('resources', 212, 212, array('center', 'center'));
+
+// Gravity form Hook
+add_action( 'gform_after_submission_22', 'download_resource', 10, 2 );
+	function download_resource( $entry, $form ) {
+		$resourceURL = get_field('resource_upload');
+		header("Location: $resourceURL");
+
+	}
