@@ -49,7 +49,7 @@ if( have_posts() ):
       <?php else:
         // if the resource is members only
         if( get_field('resource_type') == 'members' ): ?>
-          <a id="f1login" class="resource-button">
+          <a class="resource-button f1login">
             Login To Download
           </a>
         <?php else: ?>
@@ -85,7 +85,7 @@ if( is_user_logged_in() === true || is_user_logged_in() === false && get_field('
             <?php else:
               // if the resource is members only
               if( get_field('resource_type') == 'members' ): ?>
-                <a id="f1login" class="resource-button">
+                <a class="resource-button f1login">
                   Login To Download
                 </a>
               <?php else:
@@ -121,7 +121,7 @@ endif;?>
 <div id="f1-modal" class="modal">
   <div class="container">
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 text-center">
         <form name="loginform" id="loginform" action="<?php echo get_home_url();?>/wp-login.php" method="post">
         	<p>
         		<label for="user_login">Username or Email<br />
