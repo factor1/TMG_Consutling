@@ -103,7 +103,7 @@ if( is_user_logged_in() ): ?>
   </article>
 <?php endif;
 
-<?php
+
   endwhile;
 endif;
 get_footer(); ?>
