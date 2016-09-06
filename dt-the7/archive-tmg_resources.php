@@ -1,5 +1,15 @@
 <?php
+
 get_header();
+
+$categories = get_terms( 'resource_category', array(
+    'hide_empty' => true,
+) );
+
+$tags = get_terms( 'resource_tag', array(
+    'hide_empty' => true,
+) );
+
 ?>
 
 <section class="container">
@@ -26,47 +36,23 @@ get_header();
       <h2 class="filter-headline">
         Filter Resources
       </h2>
-      <div class="filter-select">
-        Categories
+      <div class="filter-select categories">
+        <span>Categories</span>
         <div class="filter-dropdown">
           <ul>
-            <li>
-              Item
-            </li>
-            <li>
-              Item
-            </li>
-            <li>
-              Item
-            </li>
-            <li>
-              Item
-            </li>
-            <li>
-              Item
-            </li>
+            <?php foreach($categories as $category) { ?>
+            <li data-value="<?php echo $category->term_id; ?>"><?php echo esc_html($category->name); ?></li>
+            <?php } ?>
           </ul>
         </div>
       </div>
-      <div class="filter-select">
-        Topics
+      <div class="filter-select tags">
+        <span>Topics</span>
         <div class="filter-dropdown">
           <ul>
-            <li>
-              Item
-            </li>
-            <li>
-              Item
-            </li>
-            <li>
-              Item
-            </li>
-            <li>
-              Item
-            </li>
-            <li>
-              Item
-            </li>
+            <?php foreach($tags as $tag) { ?>
+            <li data-value="<?php echo $tag->term_id; ?>"><?php echo esc_html($tag->name); ?></li>
+            <?php } ?>
           </ul>
         </div>
       </div>

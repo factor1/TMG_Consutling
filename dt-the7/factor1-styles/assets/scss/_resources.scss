@@ -32,9 +32,41 @@ $primary:   $blue;
   padding: 3px 10px 0;
   color: $primary;
   cursor: pointer;
-  .filter-dropdown{
+  position: relative;
+  
+  .filter-dropdown {
     display: none;
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    top: 100%;
+    left: -1px;
+    border: 1px solid #ccc;
+    
+    li {
+        display: block;
+        padding: 5px 20px;
+        background-color: #ffffff;
+        
+        + li {
+            border-top: 1px solid #ccc;
+        }
+        
+        &:hover
+        {
+            background-color: #ccc;
+            cursor: pointer;
+        }
+    }
+
   }
+  
+  &.active {
+    .filter-dropdown {
+        display: block;  
+    }
+  }
+
 }
 
 .filter-select + .filter-select{
@@ -169,7 +201,7 @@ img{
   margin-right: 9px;
 }
 .f1-close-thik:after {
-  content: '✖'; /* UTF-8 symbol */
+  content: '?'; /* UTF-8 symbol */
 }
 
 @media screen and (max-width: 400px){
