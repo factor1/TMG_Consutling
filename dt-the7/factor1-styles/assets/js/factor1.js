@@ -16,7 +16,7 @@
         var wpJsonUrl = window.wpJsonUrl || '';
 
         // If no wpJsonUrl set, bail
-        if(!wpJsonUrl( {
+        if(!wpJsonUrl) {
             return;
         }
 
