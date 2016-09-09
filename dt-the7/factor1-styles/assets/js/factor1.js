@@ -13,6 +13,12 @@
         // Load elements
         var posts$ = $('#resource-posts');
         var loggedin = window.loggedin || false;
+        var wpJsonUrl = window.wpJsonUrl || '';
+
+        // If no wpJsonUrl set, bail
+        if(!wpJsonUrl( {
+            return;
+        }
 
         // Resource API Wrapper
         var resources = {
@@ -20,7 +26,7 @@
             fetch: function() {
 
                 // Send request & get response
-                $.get('/wp-json/wp/v2/tmg_resources/?_embed',{
+                $.get(wpJsonUrl+'tmg_resources/?_embed',{
                     get_param: 'value',
                     category: $('div.filter-select.categories').data('value'),
                     tag: $('div.filter-select.tags').data('value')

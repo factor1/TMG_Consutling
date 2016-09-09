@@ -74,15 +74,10 @@ $tags = get_terms( 'resource_tag', array(
   </div>
 </section>
 
-<?php if( is_user_logged_in() ):?>
-  <script>
-    var loggedin = true;
-  </script>
-<?php else: ?>
-  <script>
-    var loggedin = false;
-  </script>
-<?php endif;?>
+<script type="text/javascript">
+    window.loggedin = <?php echo is_user_logged_in() ? 'true' : 'false'; ?>;
+    window.wpJsonUrl = '<?php echo add_slashes(home_url().'/wp-json/wp/v2/'); ?>';
+</script>
 
 <div id="f1-modal" class="modal">
   <div class="container">
