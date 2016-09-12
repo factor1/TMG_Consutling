@@ -34,6 +34,18 @@ $primary:   $blue;
   cursor: pointer;
   position: relative;
 
+  &:after{
+    content: '';
+    display: absolute;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+
+    border-top: 20px solid $primary;
+  }
+
   .filter-dropdown {
     display: none;
     position: absolute;
