@@ -36,14 +36,14 @@ $primary:   $blue;
 
   &:after{
     content: '';
-    display: absolute;
-    right: 0;
+    position: absolute;
+    right: 12px;
+    top: 12px;
     width: 0;
     height: 0;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-
-    border-top: 20px solid $primary;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid $primary;
   }
 
   .filter-dropdown {
