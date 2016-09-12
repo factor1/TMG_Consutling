@@ -171,22 +171,7 @@
 
         // Reset and load all posts initially
         $('a.filter-clear').click();
-
-        // Modal Logins
-
-        document.querySelector('body').addEventListener('click', function(event) {
-          if (event.target.className.toLowerCase() === 'f1login') {
-            console.log('button clicked');
-            $('#f1-modal.modal').css('display','block');
-          }
-        });
-
-
-        // $('.f1-close-thik').click(function(){
-        //   console.log('close clicked');
-        //   $('#f1-modal.modal').css('display','none');
-        // });
-
+        
     });
 
 })(jQuery);

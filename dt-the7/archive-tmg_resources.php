@@ -96,17 +96,22 @@ $tags = get_terms( 'resource_tag', array(
 
 <script>
 // Modal JS
-//var $j = jQuery.noConflict();
+var $j = jQuery.noConflict();
 
-jQuery('.f1login').click(function() {
-  console.log('button clicked');
-  jQuery('#f1-modal.modal').css('display','block');
+// Modal Logins
+
+document.querySelector('body').addEventListener('click', function(event) {
+  if (event.target.className.toLowerCase() === 'f1login') {
+    console.log('button clicked');
+    $j('#f1-modal.modal').css('display','block');
+  }
 });
 
-jQuery('.f1-close-thik').click(function(){
-  console.log('close clicked');
-  jQuery('#f1-modal.modal').css('display','none');
-});
+
+        // $('.f1-close-thik').click(function(){
+        //   console.log('close clicked');
+        //   $('#f1-modal.modal').css('display','none');
+        // });
 
 </script>
 
