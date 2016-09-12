@@ -1,0 +1,257 @@
+// Resource Plugin Styles
+
+// colors
+$blue:      #137abf;
+$primary:   $blue;
+
+// Contact Row
+.contact-row{
+  margin-top: 55px;
+}
+
+// filter row
+.filter-row{
+  margin-top: 40px;
+}
+
+// filter headline
+.filter-headline{
+  display: inline-block;
+  color: $primary;
+  margin-right: 15px;
+  vertical-align: sub;
+}
+
+// filter select menus/dropdowns
+.filter-select{
+  display: inline-block;
+  border: 1px solid #ccc;
+  width: 130px;
+  max-width: 100%;
+  height: 28px;
+  padding: 3px 10px 0;
+  color: $primary;
+  cursor: pointer;
+  position: relative;
+
+  &:after{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid $primary;
+  }
+
+  .filter-dropdown {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    top: 100%;
+    left: -1px;
+    border: 1px solid #ccc;
+
+    li {
+        display: block;
+        padding: 5px 20px;
+        background-color: #ffffff;
+
+        + li {
+            border-top: 1px solid #ccc;
+        }
+
+        &:hover
+        {
+            background-color: #ccc;
+            cursor: pointer;
+        }
+    }
+
+  }
+
+  &.active {
+    .filter-dropdown {
+        display: block;
+    }
+  }
+
+}
+
+.filter-select + .filter-select{
+  margin-left: 15px;
+}
+
+.filter-submit{
+  display: inline-block;
+  width: auto;
+  height: 28px;
+  padding: 3px 10px 0;
+  margin-left: 15px;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.filter-clear{
+  color: #ccc;
+  text-decoration: none;
+  margin-left: 15px;
+  &--active{
+    color: $primary;
+  }
+}
+
+// Post Grid
+#resource-posts.container{
+  margin: 50px auto;
+  img{
+    border: 5px solid white;
+    box-shadow: 0 0 10px 0px rgba(0,0,0,.3)
+  }
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+// Resource title
+.resource-title{
+  color: $primary;
+  margin: 0;
+}
+
+// Post Meta Data
+.resource-post-date, .resource-category, .resource-topics{
+  font-size: 14px;
+}
+
+.resource-topics, .resource-category{
+  color: rgba($primary, 0.8);
+}
+
+// Excerpt Container
+.resource-excerpt{
+  margin-top: 20px;
+}
+
+// Buttons
+.resource-button{
+  display: inline-block;
+  position: relative;
+  margin-top: 13px;
+  background: $primary;
+  color: white;
+  text-align: center;
+  padding: 10px 10px 9px;
+  opacity: 1;
+  transition: opacity .3s ease;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover{
+    opacity: 0.8;
+    color: white;
+  }
+}
+
+// Single Page Style Overrides
+.single-tmg_resources{
+  .page-title.title-center.solid-bg{
+    display: none;
+  }
+}
+
+#resource-single-header.container{
+  margin: 50px auto 0;
+}
+
+#single-resource.container{
+  margin: 30px auto;
+}
+
+.resource-single-image{
+  img{
+    border: 5px solid white;
+    box-shadow: 0 0 10px 0px rgba(0,0,0,.3);
+  }
+}
+
+// Modal Styles
+#f1-modal.modal{
+  display: none;
+  position: fixed;
+  margin-left: -200px;
+  width: 400px;
+  top: 200px;
+  left: 50%;
+  max-width: 100%;
+  height: auto;
+  background: white;
+  z-index: 9999;
+  box-sizing: border-box;
+  padding: 0 25px;
+  form{
+    margin: 20px auto;
+  }
+  h2{
+    color: $primary;
+  }
+  #wp-submit{
+    @extend .resource-button;
+    margin: 0 auto 40px;
+    width: 200px;
+    max-width: 100%;
+    border-radius: 0;
+  }
+  .login-submit{
+    text-align: center;
+  }
+  p{
+    color: #ccc;
+  }
+  a{
+    color: rgba(19,122,191,.8);
+    text-decoration: none;
+  }
+}
+
+[class*='f1-close-'] {
+  display: block;
+  color: #777;
+  font: 14px/100% arial, sans-serif;
+  position: absolute;
+  right: -11px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
+  top: 5px;
+  margin-top: 9px;
+  margin-right: 0;
+}
+.f1-close-thik:after {
+  content: '✖'; /* UTF-8 symbol */
+}
+
+.modal-mask{
+  display: block;
+  position: fixed;
+  width: 100%;
+  min-height: 100%;
+  min-height: 100vh;
+  background: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  z-index: 9998;
+}
+
+@media screen and (max-width: 400px){
+  #f1-modal.modal{
+    width: 100%;
+    margin-left: 0;
+    left: 0;
+  }
+}
