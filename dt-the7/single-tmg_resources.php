@@ -140,11 +140,13 @@ var $j = jQuery.noConflict();
 $j('.f1login').click(function() {
   console.log('button clicked');
   $j('#f1-modal.modal').css('display','block');
+  $j('body').append('<div class="modal-mask"></div>');
 });
 
 $j('.f1-close-thik').click(function(){
   console.log('close clicked');
   $j('#f1-modal.modal').css('display','none');
+  $j('.modal-mask').remove();
 });
 </script>
 
