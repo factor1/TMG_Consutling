@@ -99,17 +99,6 @@ $tags = get_terms( 'resource_tag', array(
 var $j = jQuery.noConflict();
 
 // Modal Logins
-// $j(document).ready(function(){
-//
-//   document.querySelector('body').addEventListener('click', function(event) {
-//     if (event.target.className.toLowerCase() === 'f1login') {
-//       console.log('button clicked');
-//       $j('#f1-modal.modal').css('display','block');
-//     }
-//   });
-//
-// });
-
 function openModal(){
   console.log('Button Clicked!');
   $j('#f1-modal.modal').css('display','block');
