@@ -172,6 +172,17 @@
         // Reset and load all posts initially
         $('a.filter-clear').click();
 
+        // Modal Logins
+        $('.f1login').click(function() {
+          console.log('button clicked');
+          $('#f1-modal.modal').css('display','block');
+        });
+
+        $('.f1-close-thik').click(function(){
+          console.log('close clicked');
+          $('#f1-modal.modal').css('display','none');
+        });
+
     });
 
 })(jQuery);
