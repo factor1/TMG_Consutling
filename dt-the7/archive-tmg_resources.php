@@ -99,18 +99,20 @@ $tags = get_terms( 'resource_tag', array(
 var $j = jQuery.noConflict();
 
 // Modal Logins
-$j(document).ready(function(){
+// $j(document).ready(function(){
+//
+//   document.querySelector('body').addEventListener('click', function(event) {
+//     if (event.target.className.toLowerCase() === 'f1login') {
+//       console.log('button clicked');
+//       $j('#f1-modal.modal').css('display','block');
+//     }
+//   });
+//
+// });
 
-  document.querySelector('body').addEventListener('click', function(event) {
-    if (event.target.className.toLowerCase() === 'f1login') {
-      console.log('button clicked');
-      $j('#f1-modal.modal').css('display','block');
-    }
-  });
-
-});
-
-
+function openModal(){
+  console.log('Button Clicked!');
+}
 
         // $('.f1-close-thik').click(function(){
         //   console.log('close clicked');

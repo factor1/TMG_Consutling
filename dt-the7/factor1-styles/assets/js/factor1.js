@@ -97,7 +97,7 @@
                                 }
 
                                 // Not Free, require login to download
-                                return '<a href="#" class="resource-button f1login">Login to download</a>';
+                                return '<a href="#" class="resource-button f1login" onClick="openModal()">Login to download</a>';
                             }
 
                             // Logged in and resource free
@@ -171,7 +171,7 @@
 
         // Reset and load all posts initially
         $('a.filter-clear').click();
-        
+
     });
 
 })(jQuery);
