@@ -175,7 +175,7 @@
         // Modal Logins
 
         document.querySelector('body').addEventListener('click', function(event) {
-          if (event.target.tagName.toLowerCase() === '.f1login') {
+          if (event.target.className.toLowerCase() === 'f1login') {
             console.log('button clicked');
             $('#f1-modal.modal').css('display','block');
           }
