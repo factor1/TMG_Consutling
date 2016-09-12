@@ -112,6 +112,7 @@ var $j = jQuery.noConflict();
 
 function openModal(){
   console.log('Button Clicked!');
+  $j('#f1-modal.modal').css('display','block');
 }
 
         // $('.f1-close-thik').click(function(){
