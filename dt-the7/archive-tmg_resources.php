@@ -92,16 +92,16 @@ $tags = get_terms( 'resource_tag', array(
           Login to Access Resources
         </h2>
         <?php wp_login_form(); ?>
-        <p>
-          <a href="<?php echo get_home_url();?>/wp-login.php?action=lostpassword">
-            Forgot Password?
-          </a>
-        </p>
       </div>
       <div class="col-12 text-center">
         <p>
           Not a member? <a href="<?php echo get_home_url();?>/contact/">Contact us</a>
           for more information about membership.
+        </p>
+        <p>
+          <a href="<?php echo wp_lostpassword_url(); ?>">
+            Forgot Password?
+          </a>
         </p>
       </div>
     </div>
