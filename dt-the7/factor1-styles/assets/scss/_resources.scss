@@ -33,7 +33,7 @@ $primary:   $blue;
   color: $primary;
   cursor: pointer;
   position: relative;
-  
+
   .filter-dropdown {
     display: none;
     position: absolute;
@@ -42,16 +42,16 @@ $primary:   $blue;
     top: 100%;
     left: -1px;
     border: 1px solid #ccc;
-    
+
     li {
         display: block;
         padding: 5px 20px;
         background-color: #ffffff;
-        
+
         + li {
             border-top: 1px solid #ccc;
         }
-        
+
         &:hover
         {
             background-color: #ccc;
@@ -60,10 +60,10 @@ $primary:   $blue;
     }
 
   }
-  
+
   &.active {
     .filter-dropdown {
-        display: block;  
+        display: block;
     }
   }
 
@@ -201,7 +201,7 @@ img{
   margin-right: 9px;
 }
 .f1-close-thik:after {
-  content: '?'; /* UTF-8 symbol */
+  content: '✖'; /* UTF-8 symbol */
 }
 
 @media screen and (max-width: 400px){
