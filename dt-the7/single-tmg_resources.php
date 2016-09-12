@@ -126,8 +126,22 @@ endif;?>
       </div>
     </div>
     <div class="row">
-      <div class="col-12 text-center">
+      <div class="col-12 text-left">
+        <h2 class="text-center">
+          Login to Access Resources
+        </h2>
         <?php wp_login_form(); ?>
+      </div>
+      <div class="col-12 text-center">
+        <p>
+          Not a member? <a href="<?php echo get_home_url();?>/contact/">Contact us</a>
+          for more information about membership.
+        </p>
+        <p>
+          <a href="<?php echo wp_lostpassword_url(); ?>">
+            Forgot Password?
+          </a>
+        </p>
       </div>
     </div>
   </div>
