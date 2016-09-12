@@ -98,14 +98,14 @@ $tags = get_terms( 'resource_tag', array(
 // Modal JS
 //var $j = jQuery.noConflict();
 
-$('.f1login').click(function() {
+jQuery('.f1login').click(function() {
   console.log('button clicked');
-  $j('#f1-modal.modal').css('display','block');
+  jQuery('#f1-modal.modal').css('display','block');
 });
 
-$('.f1-close-thik').click(function(){
+jQuery('.f1-close-thik').click(function(){
   console.log('close clicked');
-  $('#f1-modal.modal').css('display','none');
+  jQuery('#f1-modal.modal').css('display','none');
 });
 
 </script>
