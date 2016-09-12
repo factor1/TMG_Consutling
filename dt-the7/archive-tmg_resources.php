@@ -122,6 +122,7 @@ function openModal(){
 $j('.f1-close-thik').click(function(){
   console.log('close clicked');
   $j('#f1-modal.modal').css('display','none');
+  $j('.modal-mask').remove();
 });
 
 </script>
