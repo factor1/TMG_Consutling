@@ -193,18 +193,30 @@ img{
   height: auto;
   background: white;
   z-index: 9999;
+  box-sizing: border-box;
+  padding: 0 25px;
   form{
     margin: 20px auto;
   }
+  h2{
+    color: $primary;
+  }
   #wp-submit{
     @extend .resource-button;
-    margin: 0 auto;
+    margin: 0 auto 40px;
     width: 200px;
     max-width: 100%;
     border-radius: 0;
   }
   .login-submit{
     text-align: center;
+  }
+  p{
+    color: #ccc;
+  }
+  a{
+    color: $primary;
+    text-decoration: none;
   }
 }
 
