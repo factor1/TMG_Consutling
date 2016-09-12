@@ -115,10 +115,10 @@ function openModal(){
   $j('#f1-modal.modal').css('display','block');
 }
 
-        // $('.f1-close-thik').click(function(){
-        //   console.log('close clicked');
-        //   $('#f1-modal.modal').css('display','none');
-        // });
+$j('.f1-close-thik').click(function(){
+  console.log('close clicked');
+  $j('#f1-modal.modal').css('display','none');
+});
 
 </script>
 
