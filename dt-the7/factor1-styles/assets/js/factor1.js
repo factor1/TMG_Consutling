@@ -173,15 +173,19 @@
         $('a.filter-clear').click();
 
         // Modal Logins
-        $('.f1login').click(function() {
-          console.log('button clicked');
-          $('#f1-modal.modal').css('display','block');
+
+        document.querySelector('body').addEventListener('click', function(event) {
+          if (event.target.tagName.toLowerCase() === '.f1login') {
+            console.log('button clicked');
+            $('#f1-modal.modal').css('display','block');
+          }
         });
 
-        $('.f1-close-thik').click(function(){
-          console.log('close clicked');
-          $('#f1-modal.modal').css('display','none');
-        });
+
+        // $('.f1-close-thik').click(function(){
+        //   console.log('close clicked');
+        //   $('#f1-modal.modal').css('display','none');
+        // });
 
     });
 
