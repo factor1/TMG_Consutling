@@ -70,7 +70,8 @@ gulp.task('minify-css', ['sass'], function() {
     }))
     .pipe(nano({
       discardComments: {removeAll: true},
-      autoprefixer: false
+      autoprefixer: false,
+      zindex: false
     }))
     .pipe(gulp.dest( './assets/css' ));
 });
