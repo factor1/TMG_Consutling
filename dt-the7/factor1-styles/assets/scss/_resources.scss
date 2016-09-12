@@ -191,12 +191,13 @@ img{
   left: 50%;
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
   background: white;
   z-index: 9999;
-  box-shadow: 0 0 10px 0px rgba(0,0,0,.3);
   form{
     margin: 20px auto;
+  }
+  #wp-submit{
+    @extend .resource-button;
   }
 }
 
