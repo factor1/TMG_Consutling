@@ -97,7 +97,7 @@
                                 }
 
                                 // Not Free, require login to download
-                                return '<a href="#" class="resource-button f1login" onClick="openModal()">Login to download</a>';
+                                return '<a class="resource-button f1login" onClick="openModal()">Login to download</a>';
                             }
 
                             // Logged in and resource free
