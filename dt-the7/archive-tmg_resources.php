@@ -111,6 +111,7 @@ var $j = jQuery.noConflict();
 function openModal(){
   console.log('Button Clicked!');
   $j('#f1-modal.modal').css('display','block');
+  $j('body').append('<div class="modal-mask"></div>');
 }
 
 $j('.f1-close-thik').click(function(){
