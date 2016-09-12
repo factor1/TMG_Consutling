@@ -96,17 +96,18 @@ $tags = get_terms( 'resource_tag', array(
 
 <script>
 // Modal JS
-var $j = jQuery.noConflict();
+//var $j = jQuery.noConflict();
 
-$j('.f1login').click(function() {
+$('.f1login').click(function() {
   console.log('button clicked');
   $j('#f1-modal.modal').css('display','block');
 });
 
-$j('.f1-close-thik').click(function(){
+$('.f1-close-thik').click(function(){
   console.log('close clicked');
-  $j('#f1-modal.modal').css('display','none');
+  $('#f1-modal.modal').css('display','none');
 });
+
 </script>
 
 <?php
