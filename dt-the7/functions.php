@@ -93,12 +93,20 @@ add_action( 'wp_enqueue_scripts', 'f1_styles' );
 add_image_size('resources', 212, 212, array('center', 'center'));
 
 // Gravity form Hook
-add_action( 'gform_after_submission_22', 'download_resource', 10, 2 );
+add_action( 'gform_after_submission_22xxx', 'download_resource', 10, 2 );
     function download_resource( $entry, $form ) {
         $resourceURL = get_field('resource_upload');
-        header("Location: $resourceURL");
+        //header("Location: $resourceURL");
+        echo do_shortcode($resourceURL);
 
     }
+    
+    
+    add_filter( 'gform_confirmation_22', 'custom_confirmation_message', 10, 4 );
+		function download_resource( $confirmation, $form, $entry, $ajax ) {
+		$resourceURL = get_field('resource_upload');
+		$confirmation = do_shortcode($resourceURL);
+	}
 
 /**
 *   Adds category and tags conditions to resources REST query
