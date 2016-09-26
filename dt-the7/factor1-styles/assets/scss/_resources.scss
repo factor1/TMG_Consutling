@@ -159,6 +159,10 @@ img{
   }
 }
 
+.download-link{
+  @extend .resource-button;
+}
+
 // Single Page Style Overrides
 .single-tmg_resources{
   .page-title.title-center.solid-bg{
