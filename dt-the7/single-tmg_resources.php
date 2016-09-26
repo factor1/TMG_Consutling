@@ -3,6 +3,9 @@ if( have_posts() ):
   while( have_posts() ): the_post();
 ?>
 
+
+<?php $download = get_field('resource_upload');?>
+
 <section id="resource-single-header" class="container">
   <div class="row">
     <div class="col-9">
@@ -43,9 +46,7 @@ if( have_posts() ):
       <?php
       // Logic for if user is logged in
       if( is_user_logged_in() ): ?>
-        <a href="<?php the_field('resource_upload');?>" class="resource-button">
-          Download
-        </a>
+        <?php echo do_shortcode($download);?>
       <?php else:
         // if the resource is members only
         if( get_field('resource_type') == 'members' ): ?>
@@ -79,9 +80,7 @@ if( is_user_logged_in() === true || is_user_logged_in() === false && get_field('
             <?php
             // Logic for if user is logged in
             if( is_user_logged_in() ): ?>
-              <a href="<?php the_field('resource_upload');?>" class="resource-button">
-                Download
-              </a>
+              <?php echo do_shortcode($download);?>
             <?php else:
               // if the resource is members only
               if( get_field('resource_type') == 'members' ): ?>
