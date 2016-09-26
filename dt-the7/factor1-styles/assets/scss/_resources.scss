@@ -248,6 +248,19 @@ img{
   z-index: 9998;
 }
 
+@media screen and (max-width: 688px){
+  .filter-select + .filter-select{
+    margin-left: 0;
+  }
+  .filter-select{
+    display: block;
+    margin-bottom: 15px;
+  }
+  .filter-submit{
+    margin-left: 0;
+  }
+}
+
 @media screen and (max-width: 400px){
   #f1-modal.modal{
     width: 100%;
