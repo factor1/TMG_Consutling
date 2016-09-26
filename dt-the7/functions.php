@@ -94,11 +94,11 @@ add_image_size('resources', 212, 212, array('center', 'center'));
 
 // Gravity form Hook
 add_filter( 'gform_confirmation_22', 'custom_confirmation_message', 10, 4 );
-      function custom_confirmation_message( $confirmation, $form, $entry, $ajax ) {
-      $resourceURL = get_field('resource_upload');
-      $download_file = do_shortcode($resourceURL);
-      return  $download_file;
-  }
+  function custom_confirmation_message( $confirmation, $form, $entry, $ajax ) {
+  $resourceURL = get_field('resource_upload');
+  $download_file = do_shortcode($resourceURL);
+  return  $download_file;
+}
 
 /**
 *   Adds category and tags conditions to resources REST query
