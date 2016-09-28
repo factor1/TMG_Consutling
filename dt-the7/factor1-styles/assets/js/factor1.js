@@ -102,7 +102,7 @@
 
                             // Logged in and resource free
                             if(post.resourceType === 'free') {
-                                return '<a href="' + post.resourceUpload + '" class="resource-button">Download</a>';
+                                return '<a href="' + post.link + '" class="resource-button">Download</a>';
                             }
 
                             // Returns members only download
