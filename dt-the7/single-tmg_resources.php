@@ -8,7 +8,7 @@ if( have_posts() ):
 
 <section id="resource-single-header" class="container">
   <div class="row">
-    <div class="col-9">
+    <div class="col-12">
       <h1>
         <?php the_title();?>
       </h1>
@@ -42,23 +42,7 @@ if( have_posts() ):
         endif; ?>
       </span>
     </div>
-    <div class="col-3 text-right">
-      <?php
-      // Logic for if user is logged in
-      if( is_user_logged_in() ): ?>
-        <?php echo do_shortcode($download);?>
-      <?php else:
-        // if the resource is members only
-        if( get_field('resource_type') == 'members' ): ?>
-          <a class="resource-button f1login">
-            Login To Download
-          </a>
-        <?php else: ?>
-
-        <?php endif;
-      endif; ?>
-    </div>
-  </div>
+      </div>
 </section>
 
 <?php
