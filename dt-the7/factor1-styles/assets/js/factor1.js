@@ -26,7 +26,7 @@
             fetch: function() {
 
                 // Send request & get response
-                $.get(wpJsonUrl+'tmg_resources/?_embed',{
+                $.get(wpJsonUrl+'tmg_resources/?_embed&per_page=20',{
                     get_param: 'value',
                     category: $('div.filter-select.categories').data('value'),
                     tag: $('div.filter-select.tags').data('value')
