@@ -26,7 +26,7 @@
             fetch: function() {
 
                 // Send request & get response
-                $.get(wpJsonUrl+'tmg_resources/?_embed',{
+                $.get(wpJsonUrl+'tmg_resources/?_embed&per_page=20',{
                     get_param: 'value',
                     category: $('div.filter-select.categories').data('value'),
                     tag: $('div.filter-select.tags').data('value')
@@ -70,13 +70,15 @@
                         // Prepare the date value
                         var post_date = new Date(Date.parse(obj.date));
 
+                        var wp_media = obj._embedded['wp:featuredmedia'] || [];
+
                         // Prepare the base post
                         var post = {
                             id: obj.id || '',
                             title: obj.title.rendered || '',
                             date: post_date.toDateString(),
                             link: obj.link || '',
-                            thumbnail: obj._embedded['wp:featuredmedia'][0].media_details.sizes.resources.source_url || '',
+                            thumbnail: (wp_media && wp_media[0].media_details.sizes.resources) ? wp_media[0].media_details.sizes.resources.source_url : '',
                             excerpt: obj.excerpt.rendered || '',
                             categories: categories,
                             tags: tags,
@@ -102,7 +104,7 @@
 
                             // Logged in and resource free
                             if(post.resourceType === 'free') {
-                                return '<a href="' + post.resourceUpload + '" class="resource-button">Download</a>';
+                                return '<a href="' + post.link + '" class="resource-button">Download</a>';
                             }
 
                             // Returns members only download
