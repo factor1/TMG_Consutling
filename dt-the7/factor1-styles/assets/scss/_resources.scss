@@ -257,9 +257,9 @@ img{
 
 // f1 loader
 .f1-loader{
-  width: 30px;
-  height: 30px;
-  box-shadow: none;
+  width: 30px !important;
+  height: 30px !important;
+  box-shadow: none !important;
 }
 
 @media screen and (max-width: 688px){
