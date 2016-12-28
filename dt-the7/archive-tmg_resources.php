@@ -69,7 +69,7 @@ $tags = get_terms( 'resource_tag', array(
 <section id="resource-posts" class="container">
   <div class="row">
     <div class="col-10 col-centered text-center">
-      <img src="<?php bloginfo('template_url');?>/factor1-styles/assets/svg/rolling.svg" alt="Loading...">
+      <img src="<?php bloginfo('template_url');?>/factor1-styles/assets/svg/rolling.svg" alt="Loading..." class="f1-loader">
     </div>
   </div>
 </section>
