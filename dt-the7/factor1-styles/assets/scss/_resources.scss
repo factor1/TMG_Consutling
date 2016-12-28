@@ -111,7 +111,10 @@ $primary:   $blue;
   margin: 50px auto;
   img{
     border: 5px solid white;
-    box-shadow: 0 0 10px 0px rgba(0,0,0,.3)
+    box-shadow: 0 0 10px 0px rgba(0,0,0,.3);
+    width: 222px;
+    height: auto;
+    max-width: 100%;
   }
 }
 
