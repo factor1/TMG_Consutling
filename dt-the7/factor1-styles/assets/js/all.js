@@ -78,7 +78,7 @@
                             title: obj.title.rendered || '',
                             date: post_date.toDateString(),
                             link: obj.link || '',
-                            thumbnail: (wp_media && wp_media[0].media_details.sizes.resources) ? wp_media[0].media_details.sizes.resources.source_url : '',
+                            thumbnail: (wp_media && wp_media[0].media_details) ? wp_media[0].media_details.sizes.resources.source_url : '',
                             excerpt: obj.excerpt.rendered || '',
                             categories: categories,
                             tags: tags,
