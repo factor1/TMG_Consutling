@@ -255,6 +255,13 @@ img{
   z-index: 9998;
 }
 
+// f1 loader
+.f1-loader{
+  width: 30px;
+  height: 30px;
+  box-shadow: none;
+}
+
 @media screen and (max-width: 688px){
   .filter-select + .filter-select{
     margin-left: 0;
