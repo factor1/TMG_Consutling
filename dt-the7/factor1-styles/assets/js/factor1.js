@@ -41,6 +41,7 @@
 
                     // No data, bail early
                     if(!data || !data.length) {
+                        console.log('No data found, bailing.');
                         return;
                     }
 
