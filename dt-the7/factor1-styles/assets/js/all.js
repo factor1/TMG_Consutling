@@ -180,7 +180,8 @@
 
         // Click load more button
         $('#load-more').on('click', function(){
-
+          currentPage++;
+          resources.fetch();
         });
 
     });
