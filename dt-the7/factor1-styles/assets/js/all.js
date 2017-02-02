@@ -35,7 +35,9 @@
                 },function(data) {
 
                     // Clear the previous list
-                    posts$.empty();
+                    if( currentPage <= 1  ){
+                      posts$.empty();
+                    }
 
                     // No data, bail early
                     if(!data || !data.length) {
@@ -175,6 +177,11 @@
 
         // Reset and load all posts initially
         $('a.filter-clear').click();
+
+        // Click load more button
+        $('#load-more').on('click', function(){
+
+        });
 
     });
 

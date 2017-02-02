@@ -77,7 +77,7 @@ $tags = get_terms( 'resource_tag', array(
 <div class="container">
   <div class="row" style="margin-bottom: 20px;">
     <div class="col-10 col-centered text-center">
-      <button class="resource-button">
+      <button id="load-more" class="resource-button">
         Load More
       </button>
     </div>
