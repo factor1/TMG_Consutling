@@ -35,9 +35,9 @@
                 },function(data) {
 
                     // Clear the previous list
-                    if( currentPage <= 1  ){
+                    //if( currentPage <= 1  ){
                       posts$.empty();
-                    }
+                    //}
 
                     // No data, bail early
                     if(!data || !data.length) {
