@@ -164,6 +164,7 @@
         // Handle filter submit
         $(document).on('click','a.filter-submit',function(e) {
             e.preventDefault();
+            currentPage = 1;
             resources.fetch();
         });
 
@@ -172,6 +173,7 @@
             e.preventDefault();
             $('div.filter-select.categories').removeClass('active').data('value','').children('span:first-child').html('Categories');
             $('div.filter-select.tags').removeClass('active').data('value','').children('span:first-child').html('Topics');
+            currentPage = 1;
             resources.fetch();
         });
 
