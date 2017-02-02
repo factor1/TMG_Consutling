@@ -2,7 +2,7 @@
 
     console.log('[Success! - Factor1 JS Initialized] - In Development');
 
-    var currentPage = 0;
+    var currentPage = 1;
 
     // if we are on the archive page, load initial posts
     $(document).ready(function() {
