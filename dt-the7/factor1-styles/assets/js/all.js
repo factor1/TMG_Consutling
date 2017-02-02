@@ -1,6 +1,6 @@
 ;(function($) {
 
-    console.log('[Success! - Factor1 JS Initialized]');
+    console.log('[Success! - Factor1 JS Initialized] - In Development');
 
     // if we are on the archive page, load initial posts
     $(document).ready(function() {
@@ -78,6 +78,7 @@
                             title: obj.title.rendered || '',
                             date: post_date.toDateString(),
                             link: obj.link || '',
+                            download: obj.acf.resource_upload,
                             thumbnail: (wp_media && wp_media[0].media_details) ? wp_media[0].media_details.sizes.resources.source_url : '//tmgconsulting.com/wp-content/themes/dt-the7/images/tmg_fallback.jpg',
                             excerpt: obj.excerpt.rendered || '',
                             categories: categories,
@@ -95,7 +96,7 @@
 
                                 // Resource free, provide download
                                 if(post.resourceType === 'free') {
-                                    return '<a href="' + post.link + '" class="resource-button">Download</a>';
+                                    return '<a href="' + post.download + '" class="resource-button">Download</a>';
                                 }
 
                                 // Not Free, require login to download
@@ -104,11 +105,11 @@
 
                             // Logged in and resource free
                             if(post.resourceType === 'free') {
-                                return '<a href="' + post.link + '" class="resource-button">Download</a>';
+                                return '<a href="' + post.download + '" class="resource-button">Download</a>';
                             }
 
                             // Returns members only download
-                            return '<a href="' + post.link + '" class="resource-button">Download</a>';
+                            return '<a href="' + post.download + '" class="resource-button">Download</a>';
 
                         })();
 
