@@ -1,6 +1,8 @@
 ;(function($) {
 
-    console.log('[Success! - Factor1 JS Initialized]');
+    console.log('[Success! - Factor1 JS Initialized] - In Development');
+
+    var currentPage = 1;
 
     // if we are on the archive page, load initial posts
     $(document).ready(function() {
@@ -26,17 +28,20 @@
             fetch: function() {
 
                 // Send request & get response
-                $.get(wpJsonUrl+'tmg_resources/?_embed&per_page=20',{
+                $.get(wpJsonUrl+'tmg_resources/?_embed&per_page=20&page='+currentPage+'',{
                     get_param: 'value',
                     category: $('div.filter-select.categories').data('value'),
                     tag: $('div.filter-select.tags').data('value')
                 },function(data) {
 
                     // Clear the previous list
-                    posts$.empty();
+                    if( currentPage <= 1  ){
+                      posts$.empty();
+                    }
 
                     // No data, bail early
                     if(!data || !data.length) {
+                        $('#load-more').remove();
                         return;
                     }
 
@@ -104,11 +109,11 @@
 
                             // Logged in and resource free
                             if(post.resourceType === 'free') {
-                                return '<a href="' + post.link + '" class="resource-button">Download</a>';
+                                return '<a href="' + post.resourceUpload + '" class="resource-button">Download</a>';
                             }
 
                             // Returns members only download
-                            return '<a href="' + post.link + '" class="resource-button">Download</a>';
+                            return '<a href="' + post.resourceUpload + '" class="resource-button">Download</a>';
 
                         })();
 
@@ -160,6 +165,7 @@
         // Handle filter submit
         $(document).on('click','a.filter-submit',function(e) {
             e.preventDefault();
+            currentPage = 1;
             resources.fetch();
         });
 
@@ -168,11 +174,18 @@
             e.preventDefault();
             $('div.filter-select.categories').removeClass('active').data('value','').children('span:first-child').html('Categories');
             $('div.filter-select.tags').removeClass('active').data('value','').children('span:first-child').html('Topics');
+            currentPage = 1;
             resources.fetch();
         });
 
         // Reset and load all posts initially
         $('a.filter-clear').click();
+
+        // Click load more button
+        $('#load-more').on('click', function(){
+          currentPage++;
+          resources.fetch();
+        });
 
     });
 

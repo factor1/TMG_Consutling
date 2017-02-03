@@ -162,6 +162,10 @@ img{
   }
 }
 
+button.resource-button{
+  border: none;
+}
+
 .download-link{
   @extend .resource-button;
 }
@@ -261,6 +265,7 @@ img{
   height: 30px !important;
   box-shadow: none !important;
 }
+
 
 @media screen and (max-width: 688px){
   .filter-select + .filter-select{

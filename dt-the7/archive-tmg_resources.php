@@ -74,6 +74,16 @@ $tags = get_terms( 'resource_tag', array(
   </div>
 </section>
 
+<div class="container">
+  <div class="row" style="margin-bottom: 20px;">
+    <div class="col-10 col-centered text-center">
+      <button id="load-more" class="resource-button">
+        Load More
+      </button>
+    </div>
+  </div>
+</div>
+
 <script type="text/javascript">
     window.loggedin = <?php echo is_user_logged_in() ? 'true' : 'false'; ?>;
     window.wpJsonUrl = '<?php echo addslashes(home_url().'/wp-json/wp/v2/'); ?>';
