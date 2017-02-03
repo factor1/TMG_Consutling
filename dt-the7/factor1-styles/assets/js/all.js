@@ -100,7 +100,7 @@
 
                                 // Resource free, provide download
                                 if(post.resourceType === 'free') {
-                                    return '<a href="' + post.resourceUpload + '" class="resource-button">Download</a>';
+                                    return '<a href="' + post.link + '" class="resource-button">Download</a>';
                                 }
 
                                 // Not Free, require login to download
