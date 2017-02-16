@@ -5,3 +5,5 @@ error_log
 *.log
 test/
 tests/
+./*/**/node_modules/
+./*/**/.DS_Store
