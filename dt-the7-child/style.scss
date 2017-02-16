@@ -1,0 +1,317 @@
+/*!
+Theme Name: The7 Child
+Theme URI: http://dream-theme.com/the7/
+Template: dt-the7
+Author: Dream-Theme
+Author URI: http://dream-theme.com/
+Description: Child theme for The7
+Tags: multipurpose,responsive,retina ready,SEO ready,mobile friendly,iOS,material design,clean,minimal,business,corporate,portfolio,creative,photography,one page site,micro site
+Version: 3.6.1.1487204893
+Updated: 2017-02-16 00:28:13
+*/
+
+// Variables
+// --------------------------------------------------------------
+$color_blue: #2179d9;
+$color_green: #36a448;
+$color_yellow: #ffdb5c;
+$color_darkgray: #414042;
+$color_gray: #58595b;
+$color_white: #fff;
+
+$font: "Open Sans", sans-serif;
+
+$small: 640px;
+$medium: 768px;
+$large: 970px;
+$xxlarge: 1400px;
+
+// Media Queries
+// --------------------------------------------------------------
+@mixin mq($args...) {
+  $media-type: 'only screen';
+  $media-type-key: 'media-type';
+  $args: keywords($args);
+  $expr: '';
+
+  @if map-has-key($args, $media-type-key) {
+    $media-type: map-get($args, $media-type-key);
+    $args: map-remove($args, $media-type-key);
+  }
+
+  @each $key, $value in $args {
+    @if $value {
+      $expr: "#{$expr} and (#{$key}: #{$value})";
+    }
+  }
+
+  @media #{$media-type} #{$expr} {
+    @content;
+  }
+}
+
+// Screen
+// -----------------------------------------------------------------------------
+@mixin screen($min, $max, $orientation: false) {
+  @include mq($min-width: $min, $max-width: $max, $orientation: $orientation) {
+    @content;
+  }
+}
+
+@mixin max-screen($max) {
+  @include mq($max-width: $max) {
+    @content;
+  }
+}
+
+@mixin min-screen($min) {
+  @include mq($min-width: $min) {
+    @content;
+  }
+}
+
+@mixin screen-height($min, $max, $orientation: false) {
+  @include mq($min-height: $min, $max-height: $max, $orientation: $orientation) {
+    @content;
+  }
+}
+
+@mixin max-screen-height($max) {
+  @include mq($max-height: $max) {
+    @content;
+  }
+}
+
+@mixin min-screen-height($min) {
+  @include mq($min-height: $min) {
+    @content;
+  }
+}
+
+// Orientation
+// -----------------------------------------------------------------------------
+@mixin landscape() {
+  @include mq($orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin portrait() {
+  @include mq($orientation: portrait) {
+    @content;
+  }
+}
+
+
+/* -------------------------------------------------------------------------------------------------
+  # Factor1 Homepage
+------------------------------------------------------------------------------------------------- */
+// Utilities
+// --------------------------------------------------------------
+.f1-container {
+    position: relative;
+    width: 90%;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.color-white * { color: $color_white !important }
+.color-darkgray * { color: $color_darkgray !important }
+
+// Set-Up
+// --------------------------------------------------------------
+#f1-home {
+    font-family: $font;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.8px;
+    color: $color_darkgray;
+
+    h1,
+    .h1 {
+        font-weight: 800;
+        font-size: 75px;
+        color: $color_darkgray;
+    }
+
+    h2,
+    .h2 {
+        font-size: 36px;
+        line-height: 43px;
+        color: $color_gray;
+    }
+
+    h3,
+    .h3 {
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 35px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: $color_blue;
+    }
+
+    .f1-button {
+        font-weight: 700;
+        font-size: 24px;
+        color: $color_darkgray;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1;
+        vertical-align: middle;
+    }
+}
+
+// Hero
+// --------------------------------------------------------------
+#f1-hero {
+    width: 100%;
+    margin-top: -50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include min-screen(1200px) {
+        padding-top: 105px;
+        padding-bottom: 70px;
+        height: 500px;
+    }
+
+    @include min-screen(1400px) {
+        background-size: cover;
+    }
+
+    .f1-hero_title {
+        @include max-screen($large) {
+            font-size: 38px;
+            line-height: 1.2;
+        }
+    }
+
+    .f1-company {
+        display: inline-block;
+        color: $color_blue;
+        text-transform: uppercase;
+
+        @include min-screen($large) {
+            margin-top: 25px;
+        }
+    }
+
+    .f1-hero_content {
+        @extend .h2;
+        margin-top: 30px;
+        font-weight: 700;
+
+        @include max-screen($large) {
+            font-size: 26px !important;
+            line-height: 30px !important;
+        }
+    }
+
+    .f1-button {
+        margin-top: 30px;
+        padding: 16px 30px;
+        display: inline-block;
+        max-width: 230px;
+        max-height: 70px;
+        border: 2px solid $color_darkgray;
+
+        @include min-screen($large) {
+            margin-top: 60px;
+        }
+    }
+}
+
+// Body
+// --------------------------------------------------------------
+#f1-body {
+    position: relative;
+}
+
+// Content
+// --------------------------------------------------------------
+#f1-content {
+    display: flex;
+    flex-direction: column;
+
+    @include min-screen($large) {
+        min-height: 750px !important;
+        flex-direction: row;
+    }
+}
+
+.f1-content_image {
+    min-height: 325px;
+
+    @include min-screen($large) {
+        flex: 0 60%;
+    }
+}
+
+.f1-content_content {
+    padding-top: 30px;
+    margin-bottom: 20px;
+
+    @include min-screen($large) {
+        flex: 40%;
+        padding-top: 50px;
+        padding-left: 30px;
+        margin-bottom: 0;
+    }
+
+    hr {
+        margin-bottom: 30px;
+    }
+
+    p:not(:last-child) {
+        margin-bottom: 25px;
+    }
+}
+
+.f1-body_title {
+    margin-bottom: 20px;
+}
+
+// Features
+// --------------------------------------------------------------
+#f1-features {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include min-screen($large) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        width: 100%;
+    }
+}
+
+.f1-feature {
+    width: 100%;
+    height: 225px;
+    padding: 50px 10px 0;
+    margin-bottom: 10px;
+    text-align: center;
+    box-sizing: border-box;
+
+    @include min-screen($large) {
+        width: 32%;
+        margin-bottom: 0;
+        padding: 50px 40px 0;
+    }
+}
+
+.f1-feature_title {
+    margin-bottom: 20px;
+}
