@@ -12,6 +12,8 @@ if ( !function_exists( 'chld_thm_cfg_parent_css' ) ):
 endif;
 add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10 );
 
+add_image_size( 'hero', 1400, 500, true );
+
 /**
  * A function to grab fields from Advanced Custom Fields.
  *

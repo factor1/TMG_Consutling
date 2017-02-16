@@ -21,7 +21,10 @@ var options = {
   autoprefixer: {
     browsers: ['> 1%', 'last 3 versions', 'Safari > 7'],
     cascade: false
-  }
+  },
+  sass: {
+    outputStyle: 'compact'
+  },
 };
 
 // Launch a server via BrowserSync
