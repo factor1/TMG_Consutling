@@ -38,7 +38,7 @@ gulp.task('sass', function() {
   .src('./style.scss')
   // .pipe($.sourcemaps.init())
   .pipe($.plumber())
-  .pipe($.sass()
+  .pipe($.sass(options.sass)
     .on('error', $.sass.logError))
     .on('error', $.notify.onError('Error compiling SASS!'))
   .pipe($.autoprefixer(options.autoprefixer))
