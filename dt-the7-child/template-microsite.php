@@ -15,42 +15,42 @@ get_header(); ?>
 
 		<?php // Custom Factor1 homepage ?>
 		<?php if (true == get_field( 'factor1_homepage' )) : ?>
-			<?php $hero_bg = get_field('hero_image') ? sprintf('style="background-image: url(%s)"', get_field('hero_image')['url']) : ''; ?>
-			<div id="f1-home">
-				<section id="f1-hero" class="stripe" <?php echo $hero_bg; ?>>
-                    <div class="wrapper">
-                        <h1 class="f1-hero_title"><?php the_field( 'hero_title' ); ?></h1>
-                        <p class="f1-hero_content"><?php the_field( 'hero_content' ); ?></p>
+				<?php $hero_bg = get_field('hero_image') ? sprintf('style="background-image: url(%s)"', get_field('hero_image')['url']) : ''; ?>
+				<div id="f1-home">
+						<section id="f1-hero" class="stripe" <?php echo $hero_bg; ?>>
+		            <div class="wrapper">
+		                <h1 class="f1-hero_title"><?php the_field( 'hero_title' ); ?></h1>
+		                <p class="f1-hero_content"><?php the_field( 'hero_content' ); ?></p>
 
-                        <?php if (true == get_field( 'hero_button' )) : ?>
-                            <a class="f1-button" href="<?php echo get_acf_link('hero_button_internal', 'hero_button_external'); ?>"><?php the_field( 'hero_button_text' ); ?></a>
-                        <?php endif; ?>
-                    </div>
-				</section>
+		                <?php if (true == get_field( 'hero_button' )) : ?>
+		                    <a class="f1-button" href="<?php echo get_acf_link('hero_button_internal', 'hero_button_external'); ?>"><?php the_field( 'hero_button_text' ); ?></a>
+		                <?php endif; ?>
+		            </div>
+						</section>
 
-				<section id="f1-body">
-					<div id="f1-content">
-						<?php $body_img = get_field('body_image') ? sprintf('style="background: url(%s) top center/cover no-repeat"', get_field('body_image')['sizes']['large']) : ''; ?>
-						<div class="f1-content_image" <?php echo $body_img; ?>></div>
-						<div class="f1-content_content">
-							<?php the_field('body_content'); ?>
-						</div>
-					</div>
+						<section id="f1-body">
+							<div id="f1-content">
+									<?php $body_img = get_field('body_image') ? sprintf('style="background: url(%s) top center/cover no-repeat"', get_field('body_image')['sizes']['large']) : ''; ?>
+									<div class="f1-content_image" <?php echo $body_img; ?>></div>
+									<div class="f1-content_content">
+											<?php the_field('body_content'); ?>
+									</div>
+							</div>
 
-					<?php if ( have_rows( 'features' ) ) : ?>
-						<div id="f1-features">
-							<?php while ( have_rows( 'features' ) ) : the_row(); ?>
-								<?php $feature_img = get_sub_field('feature_image') ? sprintf('style="background: url(%s) center center/cover no-repeat"', get_sub_field('feature_image')['sizes']['medium_large']) : ''; ?>
-								<?php $feature_color = ('dark' == get_sub_field('feature_color')) ? 'color-darkgray' : 'color-white'; ?>
-                                <div class="f1-feature <?php echo $feature_color; ?>" <?php echo $feature_img; ?>>
-                                    <h3 class="f1-feature_title"><?php the_sub_field( 'feature_title' ); ?></h3>
-									<p><?php the_sub_field( 'feature_content' ); ?></p>
-								</div>
-							<?php endwhile; ?>
-						</div>
-					<?php endif; ?>
-				</section>
-			</div>
+							<?php if ( have_rows( 'features' ) ) : ?>
+									<div id="f1-features">
+											<?php while ( have_rows( 'features' ) ) : the_row(); ?>
+												<?php $feature_img = get_sub_field('feature_image') ? sprintf('style="background: url(%s) center center/cover no-repeat"', get_sub_field('feature_image')['sizes']['medium_large']) : ''; ?>
+												<?php $feature_color = ('dark' == get_sub_field('feature_color')) ? 'color-darkgray' : 'color-white'; ?>
+			                  <div class="f1-feature <?php echo $feature_color; ?>" <?php echo $feature_img; ?>>
+			                      <h3 class="f1-feature_title"><?php the_sub_field( 'feature_title' ); ?></h3>
+														<p><?php the_sub_field( 'feature_content' ); ?></p>
+												</div>
+											<?php endwhile; ?>
+									</div>
+							<?php endif; ?>
+						</section>
+				</div>
 		<?php endif; ?>
 
 		<?php // The rest of the Visual Composer content ?>
