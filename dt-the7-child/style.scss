@@ -184,10 +184,6 @@ $xxlarge: 1400px;
         height: 500px;
     }
 
-    @include min-screen(1400px) {
-        background-size: cover;
-    }
-
     .f1-hero_title {
         @include max-screen($large) {
             font-size: 38px;
