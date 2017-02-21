@@ -42,10 +42,12 @@ get_header(); ?>
 											<?php while ( have_rows( 'features' ) ) : the_row(); ?>
 												<?php $feature_img = get_sub_field('feature_image') ? sprintf('style="background: url(%s) center center/cover no-repeat"', get_sub_field('feature_image')['sizes']['medium_large']) : ''; ?>
 												<?php $feature_color = ('dark' == get_sub_field('feature_color')) ? 'color-darkgray' : 'color-white'; ?>
-			                  <div class="f1-feature <?php echo $feature_color; ?>" <?php echo $feature_img; ?>>
+												<?php $feature_link = (true == get_sub_field( 'feature_link' )) ? sprintf('href="%s"', get_sub_field( 'feature_page' )) : ''; ?>
+
+			                  <a class="f1-feature <?php echo $feature_color; ?>" <?php echo $feature_link; echo $feature_img; ?>>
 			                      <h3 class="f1-feature_title"><?php the_sub_field( 'feature_title' ); ?></h3>
 														<p><?php the_sub_field( 'feature_content' ); ?></p>
-												</div>
+												</a>
 											<?php endwhile; ?>
 									</div>
 							<?php endif; ?>
