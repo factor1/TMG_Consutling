@@ -24,13 +24,11 @@ Updated: 2017-02-16 00:28:13
 
 #f1-home h3, #f1-home .h3 { font-weight: 800; font-size: 30px; line-height: 35px; letter-spacing: 1.5px; text-transform: uppercase; color: #2179d9; }
 
-#f1-home .f1-button { font-weight: 700; font-size: 24px; color: #414042; text-transform: uppercase; text-align: center; line-height: 1; vertical-align: middle; }
+#f1-home .f1-button { font-weight: 700; font-size: 24px; color: #414042; text-transform: uppercase; text-align: center; line-height: 1; vertical-align: middle; text-decoration: none; }
 
 #f1-hero { width: 100%; margin-top: -50px; padding-top: 50px; padding-bottom: 50px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; background-position: center center; background-size: contain; background-repeat: no-repeat; }
 
 @media only screen and (min-width: 1200px) { #f1-hero { padding-top: 105px; padding-bottom: 70px; height: 500px; } }
-
-@media only screen and (min-width: 1400px) { #f1-hero { background-size: cover; } }
 
 @media only screen and (max-width: 970px) { #f1-hero .f1-hero_title { font-size: 38px; line-height: 1.2; } }
 

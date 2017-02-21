@@ -160,6 +160,7 @@ $xxlarge: 1400px;
         text-align: center;
         line-height: 1;
         vertical-align: middle;
+        text-decoration: none;
     }
 }
 
@@ -181,10 +182,6 @@ $xxlarge: 1400px;
         padding-top: 105px;
         padding-bottom: 70px;
         height: 500px;
-    }
-
-    @include min-screen(1400px) {
-        background-size: cover;
     }
 
     .f1-hero_title {
