@@ -64,7 +64,7 @@ if( is_user_logged_in() === true || is_user_logged_in() === false && get_field('
             <?php
             // Logic for if user is logged in
             if( is_user_logged_in() ): ?>
-              <?php echo do_shortcode($download);?>
+              <a class="resource-button f1login" href="<?php echo esc_url(home_url("{$download}"));?>">Download</a>
             <?php else:
               // if the resource is members only
               if( get_field('resource_type') == 'members' ): ?>
