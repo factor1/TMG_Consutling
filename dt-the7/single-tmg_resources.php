@@ -4,7 +4,7 @@ if( have_posts() ):
 ?>
 
 
-<?php $download = the_field('resource_upload');?>
+<?php $download = get_field('resource_upload');?>
 
 <section id="resource-single-header" class="container">
   <div class="row">
