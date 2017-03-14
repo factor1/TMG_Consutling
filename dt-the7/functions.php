@@ -127,3 +127,14 @@ add_filter('rest_tmg_resources_query',function($args,$request) {
     return $args;
 
 },10,2);
+
+/**
+ * Debug some piece of code.
+ * Remove the die; if you want the rest of the code on the page to execute
+ *
+ * @param $code The code that you want to check.
+ */
+function debug( $code ) {
+  printf( '<pre>%s</pre>', print_r( $code, true ) );
+  die;
+}
