@@ -61,8 +61,7 @@ if( is_user_logged_in() === true || is_user_logged_in() === false && get_field('
             <?php
             // Logic for if user is logged in
             if( is_user_logged_in() ): ?>
-              <?php printf( '<pre>%s</pre>', print_r( get_field('resource_upload'), true ) ); ?>
-              <a class="resource-button f1login" href="<?php echo esc_url(home_url());?>/<?php the_field('resource_upload'); ?>">Download</a>
+              <a class="resource-button f1login" href="<?php echo esc_url(home_url());?>/<?php the_field('resource_upload');?>">Download</a>
             <?php else:
               // if the resource is members only
               if( get_field('resource_type') == 'members' ): ?>
