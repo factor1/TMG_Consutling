@@ -136,5 +136,5 @@ add_filter('rest_tmg_resources_query',function($args,$request) {
  */
 function debug( $code ) {
   printf( '<pre>%s</pre>', print_r( $code, true ) );
-  die;
+  // die;
 }
