@@ -66,13 +66,30 @@ $tags = get_terms( 'resource_tag', array(
   </div>
 </section>
 
-<section id="resource-posts" class="container">
+
+<div class="contianer">
+	<div class="row">
+		
+		
+		<div class="col-3 membersidebar">
+		  <?php  dynamic_sidebar('member-sidebar'); ?>
+	  	</div>
+	  
+	  
+
+<section id="resource-posts" class="col-9">
   <div class="row">
-    <div class="col-10 col-centered text-center">
+	  
+	  
+    <div class="col-10 text-center">
       <img src="<?php bloginfo('template_url');?>/factor1-styles/assets/svg/rolling.svg" alt="Loading..." class="f1-loader">
     </div>
   </div>
 </section>
+
+
+	</div>
+</div>
 
 <div class="container">
   <div class="row" style="margin-bottom: 20px;">

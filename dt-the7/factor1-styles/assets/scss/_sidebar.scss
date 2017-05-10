@@ -1,0 +1,19 @@
+.membersidebar {
+	background:#eee; 
+	min-height: 500px; 
+	border: 1px solid #ccc;
+	padding: 20px;
+	
+	.widget_text {
+		margin-bottom: 20px;
+		
+		a.button {
+			margin: 10px 0;
+			display: block;
+			width: auto;
+			text-align: center;
+			
+			&:hover {background: #333;}
+		}
+	}
+}

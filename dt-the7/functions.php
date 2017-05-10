@@ -33,6 +33,16 @@ function f1_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'f1_styles' );
 
+register_sidebar( array(
+		'name' => __( 'Member Sidebar', 'f1' ),
+		'id' => 'member-sidebar',
+		'description' => __( 'The primary widget area on the left side of members', 'f1' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2>',
+		'after_title' => '</h2>',
+	) );
+
 
 /**
   * Add REST API support to an already registered post type.
