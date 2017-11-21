@@ -48,7 +48,7 @@ Updated: 2017-02-16 00:28:13
 
 #f1-content { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
 
-@media only screen and (min-width: 970px) { #f1-content { min-height: 750px !important; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; } }
+@media only screen and (min-width: 970px) { #f1-content { min-height: 850px !important; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; } }
 
 .f1-content_image { min-height: 325px; }
 

@@ -239,7 +239,7 @@ $xxlarge: 1400px;
     flex-direction: column;
 
     @include min-screen($large) {
-        min-height: 750px !important;
+        min-height: 850px !important;
         flex-direction: row;
     }
 }

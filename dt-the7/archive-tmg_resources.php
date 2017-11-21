@@ -16,18 +16,10 @@ $tags = get_terms( 'resource_tag', array(
   <div class="row">
     <div class="col-12">
       <h1>
-        Resources
+        TMG Research Library
       </h1>
       <p>
-        RIMSolutions™, the research and innovation practice of TMG Consulting,
-        provides membership-based and complementary research into the relationship
-        between utilities and their customers and technologies that support stronger,
-        more satisfying connections. Additionally, we offer commissioned studies
-        for utilities and solution providers, along with whitepapers and presentations
-        for external audiences.
-      </p>
-      <p class="contact-row">
-        Contact us at 512.993.6331 to learn more or email <a href="mailto:research@tmgconsulting.com">research@tmgconsulting.com</a>.
+        RIMSolutions™, the research practice of TMG Consulting, produces deep intelligence into utility company operations and the factors and technologies forcing them to change.  Publications are infused with data from TMG’s projects. While some studies are available to research members only, others are complimentary. TMG’s client companies receive an automatic research membership with unlimited individual logins.  To find out if you belong to a client company, inquire about membership, or receive a login, email <a href="mailto:research@tmgconsulting.com">research@tmgconsulting.com</a>.
       </p>
     </div>
   </div>
